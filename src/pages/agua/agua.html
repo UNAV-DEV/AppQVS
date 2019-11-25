@@ -1,0 +1,19 @@
+<!--
+  Esta modulo es la portada de los habitos, recibe los datos del habito y presenta el diseno predeterminado para cada habito
+-->
+
+
+<ion-content id="page-agua" [ngStyle]="{'background-image': 'url(' + fondo + ')'}">
+    <img id="logoblancoagua" [src]="imagen">
+    <h1 id="aguatitulo"><strong>{{titulohbt}}</strong></h1>
+    <h6 id="txtdescripcionagua"  >{{descripcion}}</h6>
+    <h5 id="txtdescripcionagua2"><strong>{{pregunta1}}</strong><br>
+      {{txt1}}<br><br>
+      
+      <strong>{{pregunta2}}</strong><br>
+      {{txt2}}
+      </h5>
+
+      <button ion-button color="light" outline style="display:inline; position:relative; width: 40%; margin-left: 30%" (click)='goToHbt()' >ADELANTE</button>
+
+</ion-content>

@@ -1,0 +1,549 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>AppQVS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">AppQVS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>InstruccionesPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/instrucciones/instrucciones.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Modulo de Instrucciones, muestra las instrucciones iniciales</p>
+
+    </p>
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-instrucciones</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>instrucciones.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#goToMenu">goToMenu</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToMenu"></a>
+                    <span class="name">
+                        <b>
+                            goToMenu
+                        </b>
+                        <a href="#goToMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goToMenu()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/pages/instrucciones/instrucciones.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Navega hacia el modulo de Tabs en la pagina principal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { MenuPrincipalPage } from &#x27;./../menu-principal/menu-principal&#x27;;
+import { Component } from &#x27;@angular/core&#x27;;
+import { IonicPage, NavController, NavParams } from &#x27;ionic-angular&#x27;;
+import { TabsPage } from &#x27;../tabs/tabs&#x27;;
+
+/**
+ * Modulo de Instrucciones, muestra las instrucciones iniciales
+ */
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-instrucciones&#x27;,
+  templateUrl: &#x27;instrucciones.html&#x27;,
+})
+export class InstruccionesPage {
+/**
+ * @ignore
+ */
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+/**
+ * @ignore
+ */
+  ionViewDidLoad() {
+    console.log(&#x27;ionViewDidLoad InstruccionesPage&#x27;);
+  }
+/**
+ * Navega hacia el modulo de Tabs en la pagina principal
+ */
+  goToMenu(){
+    this.navCtrl.setRoot(TabsPage);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!--
+  Generated template for the InstruccionesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+--&gt;
+
+&lt;ion-content style&#x3D;&quot;position: absolute;&quot;&gt;
+  
+  &lt;ion-slides  pager&#x3D;&quot;true&quot;&gt;
+    
+    &lt;ion-slide id&#x3D;&quot;instruccion&quot;&gt;
+      &lt;div id&#x3D;&quot;logos&quot;&gt;  
+        &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+        &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+       &lt;/div&gt;
+      &lt;div id&#x3D;&quot;textos&quot;&gt;&lt;h1&gt;&lt;strong&gt;¡BIENVENIDOS!&lt;/strong&gt;&lt;/h1&gt;
+      &lt;h4&gt;¡UNA AVENTURA HACIA LA VIDA REAL!&lt;/h4&gt;
+      &lt;h3 style&#x3D;&quot;color:#96005a&quot;&gt; &lt;strong&gt;ACERCA DE ESTE CURSO&lt;/strong&gt; &lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;p style&#x3D;&quot;text-align: justify; font-size: 80%; padding: 3%;&quot;&gt;Este curso está basado en investigaciones científicas y en ocho remedios naturales que fueron presentados desde 1863 en el libro ´´Consejos Sobre la Salud´´:    &lt;/p&gt;
+      &lt;p style&#x3D;&quot;position: relative; text-align: justify; font-size: 80%; padding: 5%; margin-top: -7%&quot;&gt; &lt;strong&gt;&quot;El aire puro, el sol, la abstinencia, el descanso, el ejercicio, un régimen alimenticio conveniente, el agua y la 
+        confianza en el poder divino son los verdaderos remedios. Todos debieran conocer los agentes que la 
+        naturaleza provee como remedios, y saber aplicarlos&quot;. Consejos Sobre la Salud, Pág. 89.
+        &lt;/strong&gt; &lt;/p&gt;
+        &lt;p style&#x3D;&quot;text-align: justify; font-size: 80%; padding: 3%; margin-top: -6%&quot;&gt;Estos remedios gratuitos y disponibles para todas las personas se han programado en este curso que te 
+          enseñará a desarrollar y conservar una vida mejor en el ámbito físico, mental, espiritual y social. 
+           &lt;br&gt;&lt;br&gt;
+          ¿Deseas vivir más, tener más salud y ser más feliz? Realiza las actividades que te presentamos en este curso, 
+          siguiendo las siguientes instrucciones y tu sueño podrá hacerse realidad.
+          &lt;/p&gt; &lt;br&gt;
+        &lt;img id&#x3D;&quot;img&quot; src&#x3D;&quot;./assets/imgs/img.png&quot; alt&#x3D;&quot;&quot;&gt;
+    &lt;/ion-slide&gt; 
+
+     &lt;ion-slide id&#x3D;&quot;instruccion-1&quot;&gt;
+      &lt;div id&#x3D;&quot;logos&quot;&gt;  
+        &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+        &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+       &lt;/div&gt;
+      &lt;div id&#x3D;&quot;textos&quot;&gt;
+        &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/1.png&quot; alt&#x3D;&quot;&quot;&gt;
+       &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;OCHO HÁBITOS &lt;br&gt; EN OCHO SEMANAS&lt;/strong&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;p style&#x3D;&quot;font-size: 80%; width: 80%; margin-left: 10%;&quot;&gt; &lt;strong&gt;Cada semana aprenderás cómo ir incorporando un hábito nuevo a tu estilo de vida, los hábitos son:&lt;/strong&gt; 
+          &lt;/p&gt;
+
+          &lt;p style&#x3D;&quot;color: #96005a; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icobeberagua.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 1: &lt;strong&gt;Beber Agua Natural&lt;/strong&gt; &lt;/p&gt;
+          &lt;p style&#x3D;&quot;color: #96005a; ; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icoactitudpositiva.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 2: &lt;strong&gt;Actitud Positiva&lt;/strong&gt; &lt;/p&gt;
+          &lt;p style&#x3D;&quot;color: #96005a; ; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icobiencomer.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 3: &lt;strong&gt;El Bien Comer&lt;/strong&gt; &lt;/p&gt;
+          &lt;p style&#x3D;&quot;color: #96005a; ; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icoactividadfisica.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 4: &lt;strong&gt;Realizar Actividad Física&lt;/strong&gt; &lt;/p&gt;
+          &lt;p style&#x3D;&quot;color: #96005a; ; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icodescansoadecuado.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 5: &lt;strong&gt;Descanso Adecuado &lt;/strong&gt; &lt;/p&gt;
+          &lt;p style&#x3D;&quot;color: #96005a; ; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icoautocontrol.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 6: &lt;strong&gt;Auto-control &lt;/strong&gt; &lt;/p&gt;
+          &lt;p style&#x3D;&quot;color: #96005a; ; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icodesayunarmas.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 7: &lt;strong&gt;Desayunar Más y Cenar Menos&lt;/strong&gt; &lt;/p&gt;
+          &lt;p style&#x3D;&quot;color: #96005a; ; font-size: 70%&quot;&gt; &lt;img style&#x3D;&quot;width: 8%; vertical-align:middle&quot; src&#x3D;&quot;./assets/imgs/icoserfeliz.png&quot; alt&#x3D;&quot;&quot;&gt; Semana 8: &lt;strong&gt;Ser Feliz&lt;/strong&gt; &lt;/p&gt;
+
+     &lt;/ion-slide&gt;
+
+
+     &lt;ion-slide id&#x3D;&quot;instruccion-2&quot;&gt;
+      &lt;div id&#x3D;&quot;logos&quot;&gt;  
+        &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+        &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+       &lt;/div&gt;
+      &lt;div id&#x3D;&quot;textos&quot;&gt;
+        &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/2.png&quot; alt&#x3D;&quot;&quot;&gt;
+        &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;UNA SALUD INTEGRAL&lt;/strong&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;p style&#x3D;&quot;width: 80%; font-size: 85%; margin-left: 10% &quot;&gt; &lt;strong&gt; Los hábitos que integrarás a tu estilo de vida te ayudarán a desarrollar todos los aspectos de tu salud:&lt;/strong&gt;
+      &lt;/p&gt;
+
+      &lt;div&gt;
+        &lt;img id&#x3D;&quot;salud&quot; src&#x3D;&quot;./assets/imgs/saludfisica.png&quot;&gt;
+        &lt;img id&#x3D;&quot;salud1&quot; src&#x3D;&quot;./assets/imgs/saludmental.png&quot;&gt;
+        &lt;/div&gt;
+      &lt;div&gt;
+          &lt;img id&#x3D;&quot;salud2&quot; src&#x3D;&quot;./assets/imgs/saludespiritual.png&quot;&gt;
+          &lt;img id&#x3D;&quot;salud1&quot; src&#x3D;&quot;./assets/imgs/saludsocial.png&quot;&gt;
+          
+        &lt;/div&gt;
+
+        
+          &lt;img id&#x3D;&quot;img2&quot; src&#x3D;&quot;./assets/imgs/img2.png&quot; alt&#x3D;&quot;&quot;&gt;
+     &lt;/ion-slide&gt;
+
+  
+
+     &lt;ion-slide id&#x3D;&quot;instruccion-3&quot;style&#x3D;&quot;font-size:1.5em&quot;&gt;
+      &lt;div id&#x3D;&quot;logos&quot;&gt;  
+        &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+        &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+       &lt;/div&gt;
+      &lt;div id&#x3D;&quot;textos&quot;&gt;
+        &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/3.png&quot; alt&#x3D;&quot;&quot;&gt;
+        &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;EVALUACIÓN DE TU &lt;br&gt;ESTILO DE VIDA&lt;/strong&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;p style&#x3D;&quot;width: 70%; font-size: 70%; margin-left: 15%; margin-top: 5%; &quot;&gt; &lt;strong&gt; Al inicio de cada hábito podrás contestar unas preguntas sencillas que te darán una evaluación sobre tu estilo de vida en relación con el hábito a practicar esa semana.
+      &lt;/strong&gt;
+      &lt;/p&gt;
+
+        
+      &lt;img id&#x3D;&quot;img3&quot; src&#x3D;&quot;./assets/imgs/img3.png&quot; alt&#x3D;&quot;&quot;&gt;
+     &lt;/ion-slide&gt;
+
+              
+     &lt;ion-slide id&#x3D;&quot;instruccion-4&quot;&gt; 
+    
+          &lt;div id&#x3D;&quot;logos&quot;&gt;  
+            &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+            &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+           &lt;/div&gt;
+           &lt;div id&#x3D;&quot;textos&quot;&gt;
+            &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/4.png&quot; alt&#x3D;&quot;&quot;&gt;
+            &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;ACTIVIDADES&lt;br&gt;DIARIAS&lt;/strong&gt;&lt;/h1&gt;
+          &lt;/div&gt;
+          &lt;p style&#x3D;&quot;width: 70%; font-size: 80%; margin-left: 15%; margin-top: 5%; &quot;&gt; &lt;strong&gt; Cada día se te invitará a realizar una actividad que contribuirá a la adquisición o mejora del hábito de la semana.      &lt;/strong&gt;
+          &lt;/p&gt;
+    
+            
+          &lt;img id&#x3D;&quot;img4&quot; src&#x3D;&quot;./assets/imgs/img4.png&quot; alt&#x3D;&quot;&quot;&gt;
+         
+     &lt;/ion-slide&gt;
+
+               
+     &lt;ion-slide id&#x3D;&quot;instruccion-5&quot;&gt; 
+    
+      &lt;div id&#x3D;&quot;logos&quot;&gt;  
+        &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+        &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+       &lt;/div&gt;
+       &lt;div id&#x3D;&quot;textos&quot;&gt;
+        &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/5.png&quot; alt&#x3D;&quot;&quot;&gt;
+        &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;ARTÍCULOS PARA &lt;br&gt;SABER MÁS&lt;/strong&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;p style&#x3D;&quot;width: 50%; font-size: 80%; margin-left: 25%; margin-top: 5%; &quot;&gt; &lt;strong&gt; Asimismo, tendrás a la disposición un artículo que te brindará más información sobre las actividades y sus beneficios.
+
+      &lt;/strong&gt;
+      &lt;/p&gt;
+
+        
+      &lt;img id&#x3D;&quot;img5&quot; src&#x3D;&quot;./assets/imgs/img5.png&quot; alt&#x3D;&quot;&quot;&gt;
+ &lt;/ion-slide&gt;
+
+           
+ &lt;ion-slide id&#x3D;&quot;instruccion-6&quot;&gt; 
+    
+  &lt;div id&#x3D;&quot;logos&quot;&gt;  
+    &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+    &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+   &lt;/div&gt;
+   &lt;div id&#x3D;&quot;textos&quot;&gt;
+    &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/6.png&quot; alt&#x3D;&quot;&quot;&gt;
+    &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;DATOS INDISPENSABLES PARA EVALUAR TU SALUD&lt;/strong&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;p style&#x3D;&quot;width: 80%; font-size: 90%; margin-left: 10%; margin-top: 5%; text-align: left&quot;&gt; Para poder evaluar tu IMC y tu Perímetro Abdominal se requerirá la siguiente información: &lt;br&gt;
+  a)&lt;strong&gt; PESO&lt;/strong&gt; &lt;br&gt;
+    b)&lt;STROng&gt; ESTATURA&lt;/STROng&gt; &lt;br&gt;
+    c)&lt;strong&gt; CINTURA&lt;/strong&gt; &lt;span style&#x3D;&quot;font-size: 80%&quot;&gt;(El diámetro de la cintura se mide a la altura del ombligo)&lt;/span&gt;
+    &lt;br&gt; Con estos datos  podrás obtener una evaluación de tu estado de salud.
+    
+  &lt;/p&gt;
+
+    
+  &lt;img id&#x3D;&quot;img6&quot; src&#x3D;&quot;./assets/imgs/img6.png&quot; alt&#x3D;&quot;&quot;&gt;
+&lt;/ion-slide&gt;
+
+          
+&lt;ion-slide id&#x3D;&quot;instruccion-7&quot;&gt; 
+    
+  &lt;div id&#x3D;&quot;logos&quot;&gt;  
+    &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+    &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+   &lt;/div&gt;
+   &lt;div id&#x3D;&quot;textos&quot;&gt;
+    &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/7.png&quot; alt&#x3D;&quot;&quot;&gt;
+    &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;DATOS OPCIONALES PARA EVALUAR TU SALUD&lt;/strong&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;p style&#x3D;&quot;width: 85%; font-size: 80%; margin-left: 7.5%; margin-top: 7%; text-align: justify&quot;&gt; De manera &lt;strong&gt;OPCIONAL&lt;/strong&gt; puedes recolectar los siguientes datos en tu centro de salud, hospital o laboratorio  de confianza: 
+    &lt;br&gt;
+ &lt;strong&gt;a) PRESIÓN ARTERIAL&lt;/strong&gt; &lt;br&gt;
+ &lt;strong&gt;b) GLUCOSA EN AYUNAS&lt;/strong&gt;   &lt;br&gt;
+ &lt;strong&gt;c) COLESTEROL TOTAL&lt;/strong&gt; &lt;br&gt;
+ &lt;strong&gt;d) COLESTEROL HDL &lt;/strong&gt; &lt;br&gt;
+ &lt;strong&gt;e) COLESTEROL LDL&lt;/strong&gt; &lt;br&gt;
+ &lt;strong&gt;f) TRIGLICÉRIDOS &lt;/strong&gt; &lt;br&gt;
+Con estos datos  podrás obtener una valoración de tu estado de salud.
+
+  &lt;/p&gt;
+
+    
+  &lt;img id&#x3D;&quot;img6&quot; src&#x3D;&quot;./assets/imgs/img7.png&quot; alt&#x3D;&quot;&quot;&gt;
+&lt;/ion-slide&gt;
+
+          
+&lt;ion-slide id&#x3D;&quot;instruccion-8&quot;&gt; 
+    
+  &lt;div id&#x3D;&quot;logos&quot;&gt;  
+    &lt;img id&#x3D;&quot;img8hs&quot; src&#x3D;&quot;./assets/imgs/logohabitos.png&quot;&gt;
+    &lt;img id&#x3D;&quot;imgqvs&quot; src&#x3D;&quot;./assets/imgs/logo.png&quot;&gt; 
+   &lt;/div&gt;
+   &lt;div id&#x3D;&quot;textos&quot;&gt;
+    &lt;img style&#x3D;&quot;position: relative; display: inline-block; width: 25%&quot; src&#x3D;&quot;./assets/imgs/8.png&quot; alt&#x3D;&quot;&quot;&gt;
+    &lt;h1 style&#x3D;&quot;color: #96005a; margin-top: 1%&quot;&gt;&lt;strong&gt;PERSEVERANCIA&lt;/strong&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;p style&#x3D;&quot;width: 70%; font-size: 80%; margin-left: 15%; margin-top: 5%; &quot;&gt; &lt;strong&gt;Para asegurar la formación del hábito te recomendamos que realices al menos cinco de las actividades de cada hábito.&lt;/strong&gt;
+  &lt;/p&gt;
+
+  &lt;button id&#x3D;&quot;botons&quot; ion-button block outline color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;goToMenu()&quot;&gt;EMPEZAR&lt;/button&gt;  
+  &lt;br&gt;
+  &lt;img id&#x3D;&quot;img4&quot; src&#x3D;&quot;./assets/imgs/img8.png&quot; alt&#x3D;&quot;&quot;&gt;
+  
+ 
+&lt;/ion-slide&gt;
+    
+   &lt;/ion-slides&gt;  
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!--  Generated template for the InstruccionesPage page.  See http://ionicframework.com/docs/components/#navigation for more info on  Ionic pages and navigation.--><ion-content style="position: absolute;">    <ion-slides  pager="true">        <ion-slide id="instruccion">      <div id="logos">          <img id="img8hs" src="./assets/imgs/logohabitos.png">        <img id="imgqvs" src="./assets/imgs/logo.png">        </div>      <div id="textos"><h1><strong>¡BIENVENIDOS!</strong></h1>      <h4>¡UNA AVENTURA HACIA LA VIDA REAL!</h4>      <h3 style="color:#96005a"> <strong>ACERCA DE ESTE CURSO</strong> </h3>      </div>      <p style="text-align: justify; font-size: 80%; padding: 3%;">Este curso está basado en investigaciones científicas y en ocho remedios naturales que fueron presentados desde 1863 en el libro ´´Consejos Sobre la Salud´´:    </p>      <p style="position: relative; text-align: justify; font-size: 80%; padding: 5%; margin-top: -7%"> <strong>"El aire puro, el sol, la abstinencia, el descanso, el ejercicio, un régimen alimenticio conveniente, el agua y la         confianza en el poder divino son los verdaderos remedios. Todos debieran conocer los agentes que la         naturaleza provee como remedios, y saber aplicarlos". Consejos Sobre la Salud, Pág. 89.        </strong> </p>        <p style="text-align: justify; font-size: 80%; padding: 3%; margin-top: -6%">Estos remedios gratuitos y disponibles para todas las personas se han programado en este curso que te           enseñará a desarrollar y conservar una vida mejor en el ámbito físico, mental, espiritual y social.            <br><br>          ¿Deseas vivir más, tener más salud y ser más feliz? Realiza las actividades que te presentamos en este curso,           siguiendo las siguientes instrucciones y tu sueño podrá hacerse realidad.          </p> <br>        <img id="img" src="./assets/imgs/img.png" alt="">    </ion-slide>      <ion-slide id="instruccion-1">      <div id="logos">          <img id="img8hs" src="./assets/imgs/logohabitos.png">        <img id="imgqvs" src="./assets/imgs/logo.png">        </div>      <div id="textos">        <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/1.png" alt="">       <h1 style="color: #96005a; margin-top: 1%"><strong>OCHO HÁBITOS <br> EN OCHO SEMANAS</strong></h1>      </div>      <p style="font-size: 80%; width: 80%; margin-left: 10%;"> <strong>Cada semana aprenderás cómo ir incorporando un hábito nuevo a tu estilo de vida, los hábitos son:</strong>           </p>          <p style="color: #96005a; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icobeberagua.png" alt=""> Semana 1: <strong>Beber Agua Natural</strong> </p>          <p style="color: #96005a; ; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icoactitudpositiva.png" alt=""> Semana 2: <strong>Actitud Positiva</strong> </p>          <p style="color: #96005a; ; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icobiencomer.png" alt=""> Semana 3: <strong>El Bien Comer</strong> </p>          <p style="color: #96005a; ; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icoactividadfisica.png" alt=""> Semana 4: <strong>Realizar Actividad Física</strong> </p>          <p style="color: #96005a; ; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icodescansoadecuado.png" alt=""> Semana 5: <strong>Descanso Adecuado </strong> </p>          <p style="color: #96005a; ; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icoautocontrol.png" alt=""> Semana 6: <strong>Auto-control </strong> </p>          <p style="color: #96005a; ; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icodesayunarmas.png" alt=""> Semana 7: <strong>Desayunar Más y Cenar Menos</strong> </p>          <p style="color: #96005a; ; font-size: 70%"> <img style="width: 8%; vertical-align:middle" src="./assets/imgs/icoserfeliz.png" alt=""> Semana 8: <strong>Ser Feliz</strong> </p>     </ion-slide>     <ion-slide id="instruccion-2">      <div id="logos">          <img id="img8hs" src="./assets/imgs/logohabitos.png">        <img id="imgqvs" src="./assets/imgs/logo.png">        </div>      <div id="textos">        <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/2.png" alt="">        <h1 style="color: #96005a; margin-top: 1%"><strong>UNA SALUD INTEGRAL</strong></h1>      </div>      <p style="width: 80%; font-size: 85%; margin-left: 10% "> <strong> Los hábitos que integrarás a tu estilo de vida te ayudarán a desarrollar todos los aspectos de tu salud:</strong>      </p>      <div>        <img id="salud" src="./assets/imgs/saludfisica.png">        <img id="salud1" src="./assets/imgs/saludmental.png">        </div>      <div>          <img id="salud2" src="./assets/imgs/saludespiritual.png">          <img id="salud1" src="./assets/imgs/saludsocial.png">                  </div>                  <img id="img2" src="./assets/imgs/img2.png" alt="">     </ion-slide>       <ion-slide id="instruccion-3"style="font-size:1.5em">      <div id="logos">          <img id="img8hs" src="./assets/imgs/logohabitos.png">        <img id="imgqvs" src="./assets/imgs/logo.png">        </div>      <div id="textos">        <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/3.png" alt="">        <h1 style="color: #96005a; margin-top: 1%"><strong>EVALUACIÓN DE TU <br>ESTILO DE VIDA</strong></h1>      </div>      <p style="width: 70%; font-size: 70%; margin-left: 15%; margin-top: 5%; "> <strong> Al inicio de cada hábito podrás contestar unas preguntas sencillas que te darán una evaluación sobre tu estilo de vida en relación con el hábito a practicar esa semana.      </strong>      </p>              <img id="img3" src="./assets/imgs/img3.png" alt="">     </ion-slide>                   <ion-slide id="instruccion-4">               <div id="logos">              <img id="img8hs" src="./assets/imgs/logohabitos.png">            <img id="imgqvs" src="./assets/imgs/logo.png">            </div>           <div id="textos">            <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/4.png" alt="">            <h1 style="color: #96005a; margin-top: 1%"><strong>ACTIVIDADES<br>DIARIAS</strong></h1>          </div>          <p style="width: 70%; font-size: 80%; margin-left: 15%; margin-top: 5%; "> <strong> Cada día se te invitará a realizar una actividad que contribuirá a la adquisición o mejora del hábito de la semana.      </strong>          </p>                          <img id="img4" src="./assets/imgs/img4.png" alt="">              </ion-slide>                    <ion-slide id="instruccion-5">           <div id="logos">          <img id="img8hs" src="./assets/imgs/logohabitos.png">        <img id="imgqvs" src="./assets/imgs/logo.png">        </div>       <div id="textos">        <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/5.png" alt="">        <h1 style="color: #96005a; margin-top: 1%"><strong>ARTÍCULOS PARA <br>SABER MÁS</strong></h1>      </div>      <p style="width: 50%; font-size: 80%; margin-left: 25%; margin-top: 5%; "> <strong> Asimismo, tendrás a la disposición un artículo que te brindará más información sobre las actividades y sus beneficios.      </strong>      </p>              <img id="img5" src="./assets/imgs/img5.png" alt=""> </ion-slide>            <ion-slide id="instruccion-6">       <div id="logos">      <img id="img8hs" src="./assets/imgs/logohabitos.png">    <img id="imgqvs" src="./assets/imgs/logo.png">    </div>   <div id="textos">    <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/6.png" alt="">    <h1 style="color: #96005a; margin-top: 1%"><strong>DATOS INDISPENSABLES PARA EVALUAR TU SALUD</strong></h1>  </div>  <p style="width: 80%; font-size: 90%; margin-left: 10%; margin-top: 5%; text-align: left"> Para poder evaluar tu IMC y tu Perímetro Abdominal se requerirá la siguiente información: <br>  a)<strong> PESO</strong> <br>    b)<STROng> ESTATURA</STROng> <br>    c)<strong> CINTURA</strong> <span style="font-size: 80%">(El diámetro de la cintura se mide a la altura del ombligo)</span>    <br> Con estos datos  podrás obtener una evaluación de tu estado de salud.      </p>      <img id="img6" src="./assets/imgs/img6.png" alt=""></ion-slide>          <ion-slide id="instruccion-7">       <div id="logos">      <img id="img8hs" src="./assets/imgs/logohabitos.png">    <img id="imgqvs" src="./assets/imgs/logo.png">    </div>   <div id="textos">    <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/7.png" alt="">    <h1 style="color: #96005a; margin-top: 1%"><strong>DATOS OPCIONALES PARA EVALUAR TU SALUD</strong></h1>  </div>  <p style="width: 85%; font-size: 80%; margin-left: 7.5%; margin-top: 7%; text-align: justify"> De manera <strong>OPCIONAL</strong> puedes recolectar los siguientes datos en tu centro de salud, hospital o laboratorio  de confianza:     <br> <strong>a) PRESIÓN ARTERIAL</strong> <br> <strong>b) GLUCOSA EN AYUNAS</strong>   <br> <strong>c) COLESTEROL TOTAL</strong> <br> <strong>d) COLESTEROL HDL </strong> <br> <strong>e) COLESTEROL LDL</strong> <br> <strong>f) TRIGLICÉRIDOS </strong> <br>Con estos datos  podrás obtener una valoración de tu estado de salud.  </p>      <img id="img6" src="./assets/imgs/img7.png" alt=""></ion-slide>          <ion-slide id="instruccion-8">       <div id="logos">      <img id="img8hs" src="./assets/imgs/logohabitos.png">    <img id="imgqvs" src="./assets/imgs/logo.png">    </div>   <div id="textos">    <img style="position: relative; display: inline-block; width: 25%" src="./assets/imgs/8.png" alt="">    <h1 style="color: #96005a; margin-top: 1%"><strong>PERSEVERANCIA</strong></h1>  </div>  <p style="width: 70%; font-size: 80%; margin-left: 15%; margin-top: 5%; "> <strong>Para asegurar la formación del hábito te recomendamos que realices al menos cinco de las actividades de cada hábito.</strong>  </p>  <button id="botons" ion-button block outline color="primary" (click)="goToMenu()">EMPEZAR</button>    <br>  <img id="img4" src="./assets/imgs/img8.png" alt="">   </ion-slide>       </ion-slides>  </ion-content></div>'
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'Actividadhbt1Page', 'selector': 'page-actividadhbt1'},{'name': 'AguaPage', 'selector': 'page-agua'},{'name': 'BienvenidaPage', 'selector': 'page-bienvenida'},{'name': 'Compromisohbt1Page', 'selector': 'page-compromisohbt1'},{'name': 'CompromisoPage', 'selector': 'page-compromiso'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'EvaluacionImcPage', 'selector': 'page-evaluacion-imc'},{'name': 'EvaluacionPage', 'selector': 'page-evaluacion'},{'name': 'Habito1Page', 'selector': 'page-habito1'},{'name': 'Habito2Page', 'selector': 'page-habito2'},{'name': 'Habito3Page', 'selector': 'page-habito3'},{'name': 'Habito4Page', 'selector': 'page-habito4'},{'name': 'Habito5Page', 'selector': 'page-habito5'},{'name': 'Habito6Page', 'selector': 'page-habito6'},{'name': 'Habito7Page', 'selector': 'page-habito7'},{'name': 'Habito8Page', 'selector': 'page-habito8'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'InstruccionesPage', 'selector': 'page-instrucciones'},{'name': 'IntrotestaguaPage', 'selector': 'page-introtestagua'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'MenuHabitosPage', 'selector': 'page-menu-habitos'},{'name': 'MenuPrincipalPage', 'selector': 'page-menu-principal'},{'name': 'ModalImcPage', 'selector': 'page-modal-imc'},{'name': 'ModalReflexionar1Page', 'selector': 'page-modal-reflexionar1'},{'name': 'ModalTips1Page', 'selector': 'page-modal-tips1'},{'name': 'MyApp', 'selector': ''},{'name': 'PerimetroAbdominalPage', 'selector': 'page-perimetro-abdominal'},{'name': 'RegistroPage', 'selector': 'page-registro'},{'name': 'ResultadoImcPage', 'selector': 'page-resultado-imc'},{'name': 'ResultadoSaludPage', 'selector': 'page-resultado-salud'},{'name': 'RsaludPage', 'selector': 'page-rsalud'},{'name': 'RtestaguaPage', 'selector': 'page-rtestagua'},{'name': 'SaludoPage', 'selector': 'page-saludo'},{'name': 'SaludPage', 'selector': 'page-salud'},{'name': 'SlidePage', 'selector': 'page-slide'},{'name': 'TabsPage', 'selector': ''},{'name': 'TestActitudpositivaPage', 'selector': 'page-test-actitudpositiva'},{'name': 'TestActividadfisicaPage', 'selector': 'page-test-actividadfisica'},{'name': 'TestAguaPage', 'selector': 'page-test-agua'},{'name': 'TestAutocontrolPage', 'selector': 'page-test-autocontrol'},{'name': 'TestBiencomerPage', 'selector': 'page-test-biencomer'},{'name': 'TestDesayunarmasPage', 'selector': 'page-test-desayunarmas'},{'name': 'TestDescansoadecuadoPage', 'selector': 'page-test-descansoadecuado'},{'name': 'TestPage', 'selector': 'page-test'},{'name': 'TestSerfelizPage', 'selector': 'page-test-serfeliz'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'InstruccionesPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'InstruccionesPage.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+page-info {
+    position: relative;
+    display: inline-block;
+    
+    width: 80% !important;
+    height:60% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+    border: white 1px;
+    border-style: solid;
+    border-color: white;  
+    background-size: cover; 
+    
+   
+    ion-content{
+
+    background-image: url("../../assets/imgs/finfo.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    height:100% !important;
+    color:white;
+    position: relative;
+    }
+
+    #UNAV{
+        position: relative;
+        display: inline-block;
+        margin-top: 5%;
+        width: 40%;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
+
+    li{
+        color:rgb(117, 0, 82);
+    }
+    #ionitem{
+        position: relative;
+        display: inline-block;
+        margin-top: 5%;
+        background-color: rgba(255, 255, 255, 0.5);
+        
+
+    }
+}

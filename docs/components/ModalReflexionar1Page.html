@@ -1,0 +1,831 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>AppQVS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">AppQVS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ModalReflexionar1Page</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/pages/modal-reflexionar1/modal-reflexionar1.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Modulo del Modal de la reflexion diaria, aqui se muestra el mensaje  del boton &quot;Para reflexionar&quot; de la actividad diaria</p>
+
+    </p>
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>page-modal-reflexionar1</code></td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>modal-reflexionar1.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#dia">dia</a>
+                            </li>
+                            <li>
+                                <a href="#fondo">fondo</a>
+                            </li>
+                            <li>
+                                <a href="#habito">habito</a>
+                            </li>
+                            <li>
+                                <a href="#linea">linea</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navCtrl">navCtrl</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#navParams">navParams</a>
+                            </li>
+                            <li>
+                                <a href="#reflexion">reflexion</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#viewCtrl">viewCtrl</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#Cerrar">Cerrar</a>
+                            </li>
+                            <li>
+                                <a href="#ionViewWillLoad">ionViewWillLoad</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(navCtrl: NavController, navParams: NavParams, viewCtrl: ViewController)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:19</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Se definen las reflexiones y los colores del diseno para cada habito</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>navCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>navParams</td>
+                                                  
+                                                        <td>
+                                                                    <code>NavParams</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>viewCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>ViewController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Cerrar"></a>
+                    <span class="name">
+                        <b>
+                            Cerrar
+                        </b>
+                        <a href="#Cerrar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Cerrar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:135</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>cierra el modal</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewWillLoad"></a>
+                    <span class="name">
+                        <b>
+                            ionViewWillLoad
+                        </b>
+                        <a href="#ionViewWillLoad"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ionViewWillLoad()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:125</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtiene el dia de la actividad actual</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dia"></a>
+                        <span class="name">
+                            <b>
+                            dia</b>
+                            <a href="#dia"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fondo"></a>
+                        <span class="name">
+                            <b>
+                            fondo</b>
+                            <a href="#fondo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="habito"></a>
+                        <span class="name">
+                            <b>
+                            habito</b>
+                            <a href="#habito"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="linea"></a>
+                        <span class="name">
+                            <b>
+                            linea</b>
+                            <a href="#linea"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navCtrl</b>
+                            <a href="#navCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navParams"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            navParams</b>
+                            <a href="#navParams"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>NavParams</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reflexion"></a>
+                        <span class="name">
+                            <b>
+                            reflexion</b>
+                            <a href="#reflexion"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>any[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="viewCtrl"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            viewCtrl</b>
+                            <a href="#viewCtrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ViewController</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/pages/modal-reflexionar1/modal-reflexionar1.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { IonicPage, NavController, NavParams, ViewController } from &#x27;ionic-angular&#x27;;
+
+/**
+ * Modulo del Modal de la reflexion diaria, aqui se muestra el mensaje  del boton &quot;Para reflexionar&quot; de la actividad diaria
+ */
+
+@IonicPage()
+@Component({
+  selector: &#x27;page-modal-reflexionar1&#x27;,
+  templateUrl: &#x27;modal-reflexionar1.html&#x27;,
+})
+export class ModalReflexionar1Page {
+  //variables
+  reflexion:any[]&#x3D;[];
+  dia:any;
+  fondo;
+  linea;
+  habito;
+/**
+ * Se definen las reflexiones y los colores del diseno para cada habito
+ * @param navCtrl 
+ * @param navParams 
+ * @param viewCtrl 
+ */
+  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl :ViewController) {
+    this.habito&#x3D;window.localStorage.getItem(&#x27;habito&#x27;);
+    //Reflexionesn y colores
+    
+    if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;1&#x27;){
+      this.fondo&#x3D;&#x27;#26c9dc&#x27;;
+      this.linea&#x3D;&#x27;#262163&#x27;;
+    this.reflexion &#x3D; [{ref:&quot;El agua es el componente principal del cuerpo humano: normalmente representa el 60% del peso corporal en hombres adultos, y es ligeramente inferior (50-55%) en mujeres debido a su proporción natural de más grasa corporal. &quot;},
+    {ref:&quot;“Si necesitas algo para apagar la sed, el agua pura tomada poco antes o después de la comida es todo lo que la naturaleza requiere. Nunca té, café, cerveza, vino ni ninguna bebida alcohólica. El agua es el mejor líquido de que dispongamos para limpiar los tejidos”. The Review and Herald. 1884&quot;},
+    {ref:&quot;“Muchos están viviendo en un estado de violación de las leyes de la salud, y son ignorantes de la relación que sus hábitos de comer, beber y trabajar tienen con su salud... Si los que sufren solamente recurrieran a los medios sencillos que han descuidado—el uso del agua y el régimen alimenticio debido—, la naturaleza tendría la clase de ayuda que necesita, y que debiera haber tenido hacía tiempo.” Consejos Sobre el Régimen Alimenticio. Pág. 359; 1864. &quot;},
+    {ref:&quot;“Ingerida en cantidades suficientes, el agua suple las necesidades del organismo, y ayuda a la naturaleza a resistir a la enfermedad. Aplicada externamente, es uno de los medios más sencillo y eficaces para regularizar la circulación de la sangre”. El Ministerio de Curación. Pág. 181; 1905.&quot;},
+    {ref:&quot;El cerebro y los músculos son aproximadamente un 75% agua. La sangre y los riñones se componen en un 81% de agua. El 71% de tu hígado es agua y el 22% de tus huesos es agua.&quot;},
+    {ref:&quot;Cuando pierdes menos del 1% del agua de tu cuerpo, este comienza a necesitar agua de manera urgente porque se siente deshidratado.&quot;},
+    {ref:&quot;“La vida al aire libre es buena para el cuerpo y la mente. Es la medicina que Dios ha diseñado para la restauración de la salud. El aire puro, el agua limpia, la luz del sol y los hermosos parajes naturales son sus medios para devolverle la salud al enfermo, en armonía con la naturaleza”. Consejos Sobre el Régimen Alimenticio. Pág. 210; 1880.&quot;}
+  ];
+  }else if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;2&#x27;){
+    this.fondo&#x3D;&#x27;#ff36f8&#x27;;
+  this.linea&#x3D;&#x27;#84018d&#x27;;
+  this.reflexion &#x3D; [{ref:&quot;“Te aconsejo que hagas todo lo posible para estar en armonía con tus seres queridos. Cultiva una actitud amable y pacifista, y no dejes que sentimientos de venganza asalten tu mente y tu corazón. Dispones de muy poco tiempo en este mundo; actúa tomando en cuenta el futuro y la eternidad”. Mente, carácter y personalidad II. Pág. 544; 1885.&quot;},
+  {ref:&quot;Se calcula que el 25% de las personas padecen uno o más trastornos mentales o del comportamiento a lo largo de su vida, la mayoría de estos puede evitarse viviendo con una actitud positiva&quot;},
+  {ref:&quot;La depresión es un trastorno mental frecuente, el cual aumenta el riesgo de padecer diabetes, presión arterial alta y enfermedades del corazón. Se calcula que afecta a 350 millones de personas en el mundo. Tú puedes contrarrestar esta enfermedad teniendo una Actitud Positiva.&quot;},
+  {ref:&quot;“No mantengas tu mente inclinada a ver el lado desalentador de la vida; porque eso perjudica tu salud. Solo tú puedes equilibrar tu mente hacia pensamientos positivos. Trata de no pensar demasiado en los problemas que puedas tener. Todo lo que puedas hacer para apartar tu mente de ti mismo, en cualquier clase de actividad, hazlo”. Mente, carácter y personalidad II. Pág. 413; 1906&quot;},
+  {ref:&quot;´´Las habitaciones poco ventiladas influyen en la depresión mental. Las consecuencias de tener tus habitaciones cerradas y mal ventiladas son: tu organismo se debilita y pierde la salud, la circulación de la sangre se hace más lenta en tu cuerpo y tu mente se deprime y se ensombrece, mientras todo tu organismo se debilita, y hasta podrías experimentar fiebre y otras enfermedades agudas´´.  Mente, carácter y personalidad II. Pág. 501; 1868.&quot;},
+  {ref:&quot;Cuando los jefes y empleados adoptan una Actitud Positiva, esta permite a las personas sentirse más felices en su trabajo, logrando ser empleados con mucha energía y dinamismo, lo que representa para las empresas un aumento en su productividad hasta en un 88%.&quot;},
+  {ref:&quot;“La actitud positiva se refleja en el rostro. Los rostros de los que son simpáticos y generosos resplandecen con el brillo de la verdadera bondad, mientras que los que no tienen pensamientos positivos y motivos generosos, expresan en sus rostros la frialdad y negatividad que se encuentran en sus corazones”. Mente, carácter y personalidad II. Pág. 500; 1876&quot;}
+];
+}else if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;3&#x27;){
+  this.fondo&#x3D;&#x27;#17da40&#x27;;
+  this.linea&#x3D;&#x27;#085518&#x27;;
+this.reflexion &#x3D; [{ref:&quot;“Nuestro alimento debe escogerse con mucho cuidado. Nuestro régimen alimentario debe adaptarse a la estación del año, al clima en que vivimos y a nuestra ocupación”. El Ministerio de Curación. Pág. 228; 1905.&quot;},
+{ref:&quot;“El alimento debe prepararse con sencillez, aunque en forma esmerada para que incite al apetito. Debéis eliminar la grasa de vuestra alimentación. Contamina cualquier alimento que preparéis. Comed mayormente frutas y verduras”. Consejos Sobre el Régimen Alimenticio. Pág. 300; 1890.&quot;},
+{ref:&quot;“Los alimentos como el arroz, trigo, maíz, avena, judías, frijoles, guisantes y lentejas se exportan hoy a todas partes. Junto con las frutas y con la variedad de verduras propias de cada país o importadas, facilitan la elección y elaboración de comidas, sin necesidad de carnes”. Consejos Sobre el Régimen Alimenticio. Pág. 113; 1890.&quot;},
+{ref:&quot;“Si hubo alguna vez un tiempo en que la alimentación debía ser de la clase más sencilla, es ahora... Los cereales y las frutas, preparados sin grasa en forma tan natural como sea posible deberían ser nuestro alimento”. Consejos Sobre el Régimen Alimenticio. Pág. 75; 1890.&quot;},
+{ref:&quot;Según la Organización Panamericana de la Salud comer al mismo tiempo que se hace otra actividad, incrementa el riesgo de comer en exceso y las probabilidades de ser obeso.&quot;},
+{ref:&quot;“Los cereales, las frutas carnosas, las oleaginosas y las legumbres constituyen el alimento escogido para nosotros por el Creador. Preparados del modo más sencillo y natural posible, son los comestibles más sanos y nutritivos. Comunican una fuerza, una resistencia y un vigor intelectual que no pueden obtenerse de un régimen alimenticio más complejo y estimulante”. Consejos Sobre el Régimen Alimenticio. Pág. 366; 1890.&quot;},
+{ref:&quot;´´Ha de evitarse el exceso de comida, aunque sea de la más saludable. El cuerpo no puede usar más de lo que se requiere para la reparación de los diversos órganos del cuerpo, y el exceso entorpece al organismo´´. La Educación. Pág. 205; 1903.&quot;}
+];
+}else if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;4&#x27;){
+  this.fondo&#x3D;&#x27;#fb0b0d&#x27;;
+  this.linea&#x3D;&#x27;#760001&#x27;;
+this.reflexion &#x3D; [{ref:&quot;“Sin ejercicio físico nadie puede tener una constitución sana ni una salud vigorosa, y la disciplina del trabajo bien regulado no es menos esencial para desarrollar una inteligencia fuerte y activa y un carácter noble”. Historia de los Patriarcas y Profetas. Pág. 650, 651; 1890.&quot;},
+{ref:&quot;La inactividad física se encuentra entre los 10 principales factores de riesgo de mortalidad a nivel mundial.&quot;},
+{ref:&quot;“El ejercicio moderado diario fortalecerá los músculos, los cuales sin ejercicio se vuelven blandos y débiles. Mediante el ejercicio activo diario, el hígado, los riñones y los pulmones también se fortalecerán para realizar su función”. Conducción del Niño. Pág. 317; 1964.&quot;},
+{ref:&quot;“No se puede conservar la salud a menos de que se dedique una parte de cada día al ejercicio muscular al aire libre”. Conducción del Niño. Pág. 321; 1964.&quot;},
+{ref:&quot;“El ejercicio es importante para la digestión, y para gozar de una condición saludable del cuerpo y la mente. Ud. necesita ejercicio físico”. Consejos Sobre el Régimen Alimenticio. Pág. 122; 1890.&quot;},
+{ref:&quot;“Los que se dedican a ocupaciones sedentarias debieran hacer ejercicio físico aun en el caso de que no necesiten trabajar por razones pecuniarias. La salud debería ser incentivo suficiente para inducirlos a unir el trabajo físico al mental”. La Educación Cristiana. Pág. 35; 1975.&quot;},
+{ref:&quot;“Al caminar en medio de las flores y los árboles, el gozo y la alegría les llenan el corazón. Es como si Dios les sonriera, al contemplar las maravillosas cosas que él ha creado para alegrarles su corazón entristecido”. El Ministerio Médico. Pág. 307; 1902.&quot;}
+];
+}else if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;5&#x27;){
+  this.fondo&#x3D;&#x27;#4dccb6&#x27;;
+  this.linea&#x3D;&#x27;#204949&#x27;;
+this.reflexion &#x3D; [{ref:&quot;El hecho de reducir el tiempo de sueño en tan solo hora y media, aún una sola noche, hace que el estado de alerta durante el día se reduzca en un 32%.&quot;},
+{ref:&quot;“Cuando nos retiramos a descansar, el estómago ya debería haber realizado todo su trabajo, porque él también necesita tener descanso como cualquiera otra parte del cuerpo. El trabajo de digestión no debería efectuarse durante ningún lapso de las horas de sueño.”Consejos sobre el régimen alimenticio, 208&quot;},
+{ref:&quot;La Agencia Nacional para la Seguridad en el Tráfico en las Autopistas estima, anualmente en EEUU, conducir con sueño causa al menos 100,000 accidentes, 71,000 heridos y 1550 víctimas mortales.&quot;},
+{ref:&quot;“Hay que conceder a los pulmones la mayor libertad posible. Su capacidad se desarrolla mediante el libre funcionamiento; pero disminuye si se los tiene apretados y comprimidos. De ahí los malos efectos de la costumbre tan común, principalmente en las ocupaciones sedentarias, de encorvarse al trabajar.” Consejos sobre el régimen alimenticio, 124&quot;},
+{ref:&quot;“Cuando ha habido mucho exceso de alguna actividad, el descanso completo por algún tiempo prevendrá a veces una grave enfermedad.” El Ministerio de Curación, 183.&quot;},
+{ref:&quot;“La influencia del aire puro y fresco hace que la sangre circule en forma saludable por el organismo. Refresca el cuerpo, y tiende a fortalecerlo y a hacerlo saludable, mientras que al mismo tiempo su influencia se siente en forma definida en la mente, pues imparte cierto grado de compostura y serenidad.” Consejos sobre el régimen alimenticio, 124.&quot;},
+{ref:&quot;“Los de cerebro cansado y de nervios deprimidos a consecuencia de un trabajo sedentario continuo, se verán muy beneficiados por una temporada en el campo, donde lleven una vida sencilla y libre de cuidados, cerca de la naturaleza.” El Ministerio de Curación 181.&quot;}
+];
+}else if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;6&#x27;){
+  this.fondo&#x3D;&#x27;#bf41b9&#x27;;
+  this.linea&#x3D;&#x27;#62005d&#x27;;
+this.reflexion &#x3D; [{ref:&quot;“Descarten todo lo que vaya en detrimento de la salud. Use alimento sano y sencillo. La fruta es excelente, y ahorra mucho trabajo de cocina. Descartad los pasteles, tortas y postres que son concentrados, y otros platos preparados para tentar el apetito.” Consejos sobre el régimen alimenticio, 398&quot;},
+{ref:&quot;“Si supiéramos apreciar cada momento y dedicarlo a cosas buenas, tendríamos tiempo para hacer todo lo que necesitamos hacer para nosotros mismos o para los demás.” El ministerio de curación, 160&quot;},
+{ref:&quot;““¡Cuánto dinero se derrocha en casas y muebles lujosos, en placeres egoístas, en manjares costosos y malsanos, en perniciosos antojos! ¡Cuánto se malgasta en regalos que no aprovechan a nadie! En cosas superfluas y muchas veces perjudiciales.” El ministerio de curación, 159&quot;},
+{ref:&quot;Debe haber una hora señalada para cada comida, y entonces cada cual debe comer lo que su organismo requiere, y no ingerir más alimento hasta la comida siguiente.” Consejos sobre el régimen alimenticios 234&quot;},
+{ref:&quot;“La naturaleza es el médico de Dios. El aire puro, la alegre luz del sol, las flores y los árboles, los huertos y los viñedos, el ejercicio al aire libre, en medio de estas bellezas, favorecen la salud y la vida”. El ministerio de curación, 203&quot;},
+{ref:&quot;“La pérdida de auto-control manifestada al beber té y café, vino, cerveza, ron y aguardiente, y al usar tabaco, opio y otros narcóticos ha producido gran degeneración mental y física, y esta degeneración está en constante aumento.” -RH, 29 de julio de 1884; CH 49. Mente, carácter y personalidad, 149&quot;},
+{ref:&quot;“La mente debe ser adiestrada por medio de pruebas diarias hasta lograr hábitos de fidelidad, hasta obtener un sentido de las exigencias de lo recto y del deber por sobre las inclinaciones y los placeres.” Mente, carácter y personalidad, 75&quot;}
+];
+}else if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;7&#x27;){
+  this.fondo&#x3D;&#x27;#26c9dc&#x27;;
+  this.linea&#x3D;&#x27;#262163&#x27;;
+this.reflexion &#x3D; [{ref:&quot;El agua es el componente principal del cuerpo humano: normalmente representa el 60% del peso corporal en hombres adultos, y es ligeramente inferior (50-55%) en mujeres debido a su proporción natural de más grasa corporal. &quot;},
+{ref:&quot;“Si necesitas algo para apagar la sed, el agua pura tomada poco antes o después de la comida es todo lo que la naturaleza requiere. Nunca té, café, cerveza, vino ni ninguna bebida alcohólica. El agua es el mejor líquido de que dispongamos para limpiar los tejidos”. The Review and Herald. 1884&quot;},
+{ref:&quot;“Muchos están viviendo en un estado de violación de las leyes de la salud, y son ignorantes de la relación que sus hábitos de comer, beber y trabajar tienen con su salud... Si los que sufren solamente recurrieran a los medios sencillos que han descuidado—el uso del agua y el régimen alimenticio debido—, la naturaleza tendría la clase de ayuda que necesita, y que debiera haber tenido hacía tiempo.” Consejos Sobre el Régimen Alimenticio. Pág. 359; 1864. &quot;},
+{ref:&quot;“Ingerida en cantidades suficientes, el agua suple las necesidades del organismo, y ayuda a la naturaleza a resistir a la enfermedad. Aplicada externamente, es uno de los medios más sencillo y eficaces para regularizar la circulación de la sangre”. El Ministerio de Curación. Pág. 181; 1905.&quot;},
+{ref:&quot;El cerebro y los músculos son aproximadamente un 75% agua. La sangre y los riñones se componen en un 81% de agua. El 71% de tu hígado es agua y el 22% de tus huesos es agua.&quot;},
+{ref:&quot;Cuando pierdes menos del 1% del agua de tu cuerpo, este comienza a necesitar agua de manera urgente porque se siente deshidratado.&quot;},
+{ref:&quot;“La vida al aire libre es buena para el cuerpo y la mente. Es la medicina que Dios ha diseñado para la restauración de la salud. El aire puro, el agua limpia, la luz del sol y los hermosos parajes naturales son sus medios para devolverle la salud al enfermo, en armonía con la naturaleza”. Consejos Sobre el Régimen Alimenticio. Pág. 210; 1880.&quot;}
+];
+}else if(window.localStorage.getItem(&#x27;habito&#x27;)&#x3D;&#x3D;&#x27;8&#x27;){
+  this.fondo&#x3D;&#x27;#26c9dc&#x27;;
+  this.linea&#x3D;&#x27;#262163&#x27;;
+this.reflexion &#x3D; [{ref:&quot;El agua es el componente principal del cuerpo humano: normalmente representa el 60% del peso corporal en hombres adultos, y es ligeramente inferior (50-55%) en mujeres debido a su proporción natural de más grasa corporal. &quot;},
+{ref:&quot;“Si necesitas algo para apagar la sed, el agua pura tomada poco antes o después de la comida es todo lo que la naturaleza requiere. Nunca té, café, cerveza, vino ni ninguna bebida alcohólica. El agua es el mejor líquido de que dispongamos para limpiar los tejidos”. The Review and Herald. 1884&quot;},
+{ref:&quot;“Muchos están viviendo en un estado de violación de las leyes de la salud, y son ignorantes de la relación que sus hábitos de comer, beber y trabajar tienen con su salud... Si los que sufren solamente recurrieran a los medios sencillos que han descuidado—el uso del agua y el régimen alimenticio debido—, la naturaleza tendría la clase de ayuda que necesita, y que debiera haber tenido hacía tiempo.” Consejos Sobre el Régimen Alimenticio. Pág. 359; 1864. &quot;},
+{ref:&quot;“Ingerida en cantidades suficientes, el agua suple las necesidades del organismo, y ayuda a la naturaleza a resistir a la enfermedad. Aplicada externamente, es uno de los medios más sencillo y eficaces para regularizar la circulación de la sangre”. El Ministerio de Curación. Pág. 181; 1905.&quot;},
+{ref:&quot;El cerebro y los músculos son aproximadamente un 75% agua. La sangre y los riñones se componen en un 81% de agua. El 71% de tu hígado es agua y el 22% de tus huesos es agua.&quot;},
+{ref:&quot;Cuando pierdes menos del 1% del agua de tu cuerpo, este comienza a necesitar agua de manera urgente porque se siente deshidratado.&quot;},
+{ref:&quot;“La vida al aire libre es buena para el cuerpo y la mente. Es la medicina que Dios ha diseñado para la restauración de la salud. El aire puro, el agua limpia, la luz del sol y los hermosos parajes naturales son sus medios para devolverle la salud al enfermo, en armonía con la naturaleza”. Consejos Sobre el Régimen Alimenticio. Pág. 210; 1880.&quot;}
+];
+}
+  
+  }
+//obtiene dia
+/**
+ * Obtiene el dia de la actividad actual
+ */
+  ionViewWillLoad(){
+   this.dia&#x3D;this.navParams.get(&#x27;day&#x27;);
+   this.dia&#x3D; parseInt(this.dia.dia);
+   console.log(&quot;dia &quot;+ this.dia.dia);
+  }
+
+//muere modal
+/**
+ * cierra el modal
+ */
+  Cerrar(){
+    this.viewCtrl.dismiss();
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!--
+  Generated template for the ModalReflexionar1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+--&gt;
+
+
+
+&lt;ion-content [ngStyle]&#x3D;&quot;{&#x27;background-color&#x27;: &#x27;&#x27; + fondo + &#x27;&#x27; }&quot;&gt;
+ &lt;img src&#x3D;&quot;./assets/imgs/parareflexionar.png&quot; id&#x3D;&quot;parareflexionarmodal&quot;&gt;
+ &lt;img src&#x3D;&quot;./assets/imgs/logohabitos.png&quot; id&#x3D;&quot;logohpr&quot;&gt;
+ &lt;img src&#x3D;&quot;./assets/imgs/logo.png&quot; id&#x3D;&quot;logopr&quot;&gt;
+ &lt;h6 id&#x3D;&quot;txtreflexion&quot; [ngStyle]&#x3D;&quot;{&#x27;color&#x27;: &#x27;&#x27; + linea + &#x27;&#x27; }&quot; &gt; {{reflexion[dia].ref}}&lt;/h6&gt;
+&lt;img src&#x3D;&quot;./assets/imgs/habito{{habito}}/parareflexionar{{dia+1}}.png&quot; id&#x3D;&quot;imgreflexion&quot;&gt;
+
+&lt;/ion-content&gt;
+&lt;ion-footer id&#x3D;&quot;feet&quot;&gt;
+      
+  &lt;button ion-button full color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;Cerrar()&quot;&gt;¡ENTENDIDO!&lt;/button&gt;
+ 
+&lt;/ion-footer&gt;
+
+
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!--  Generated template for the ModalReflexionar1Page page.  See http://ionicframework.com/docs/components/#navigation for more info on  Ionic pages and navigation.--><ion-content [ngStyle]="{\'background-color\': \'\' + fondo + \'\' }"> <img src="./assets/imgs/parareflexionar.png" id="parareflexionarmodal"> <img src="./assets/imgs/logohabitos.png" id="logohpr"> <img src="./assets/imgs/logo.png" id="logopr"> <h6 id="txtreflexion" [ngStyle]="{\'color\': \'\' + linea + \'\' }" > {{reflexion[dia].ref}}</h6><img src="./assets/imgs/habito{{habito}}/parareflexionar{{dia+1}}.png" id="imgreflexion"></ion-content><ion-footer id="feet">        <button ion-button full color="primary" (click)="Cerrar()">¡ENTENDIDO!</button> </ion-footer></div>'
+    var COMPONENTS = [{'name': 'AboutPage', 'selector': 'page-about'},{'name': 'Actividadhbt1Page', 'selector': 'page-actividadhbt1'},{'name': 'AguaPage', 'selector': 'page-agua'},{'name': 'BienvenidaPage', 'selector': 'page-bienvenida'},{'name': 'Compromisohbt1Page', 'selector': 'page-compromisohbt1'},{'name': 'CompromisoPage', 'selector': 'page-compromiso'},{'name': 'ContactPage', 'selector': 'page-contact'},{'name': 'EvaluacionImcPage', 'selector': 'page-evaluacion-imc'},{'name': 'EvaluacionPage', 'selector': 'page-evaluacion'},{'name': 'Habito1Page', 'selector': 'page-habito1'},{'name': 'Habito2Page', 'selector': 'page-habito2'},{'name': 'Habito3Page', 'selector': 'page-habito3'},{'name': 'Habito4Page', 'selector': 'page-habito4'},{'name': 'Habito5Page', 'selector': 'page-habito5'},{'name': 'Habito6Page', 'selector': 'page-habito6'},{'name': 'Habito7Page', 'selector': 'page-habito7'},{'name': 'Habito8Page', 'selector': 'page-habito8'},{'name': 'HomePage', 'selector': 'page-home'},{'name': 'InstruccionesPage', 'selector': 'page-instrucciones'},{'name': 'IntrotestaguaPage', 'selector': 'page-introtestagua'},{'name': 'LoginPage', 'selector': 'page-login'},{'name': 'MenuHabitosPage', 'selector': 'page-menu-habitos'},{'name': 'MenuPrincipalPage', 'selector': 'page-menu-principal'},{'name': 'ModalImcPage', 'selector': 'page-modal-imc'},{'name': 'ModalReflexionar1Page', 'selector': 'page-modal-reflexionar1'},{'name': 'ModalTips1Page', 'selector': 'page-modal-tips1'},{'name': 'MyApp', 'selector': ''},{'name': 'PerimetroAbdominalPage', 'selector': 'page-perimetro-abdominal'},{'name': 'RegistroPage', 'selector': 'page-registro'},{'name': 'ResultadoImcPage', 'selector': 'page-resultado-imc'},{'name': 'ResultadoSaludPage', 'selector': 'page-resultado-salud'},{'name': 'RsaludPage', 'selector': 'page-rsalud'},{'name': 'RtestaguaPage', 'selector': 'page-rtestagua'},{'name': 'SaludoPage', 'selector': 'page-saludo'},{'name': 'SaludPage', 'selector': 'page-salud'},{'name': 'SlidePage', 'selector': 'page-slide'},{'name': 'TabsPage', 'selector': ''},{'name': 'TestActitudpositivaPage', 'selector': 'page-test-actitudpositiva'},{'name': 'TestActividadfisicaPage', 'selector': 'page-test-actividadfisica'},{'name': 'TestAguaPage', 'selector': 'page-test-agua'},{'name': 'TestAutocontrolPage', 'selector': 'page-test-autocontrol'},{'name': 'TestBiencomerPage', 'selector': 'page-test-biencomer'},{'name': 'TestDesayunarmasPage', 'selector': 'page-test-desayunarmas'},{'name': 'TestDescansoadecuadoPage', 'selector': 'page-test-descansoadecuado'},{'name': 'TestPage', 'selector': 'page-test'},{'name': 'TestSerfelizPage', 'selector': 'page-test-serfeliz'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ModalReflexionar1Page'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ModalReflexionar1Page.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
