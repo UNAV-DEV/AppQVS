@@ -4,7 +4,10 @@ import { LoginPage } from '../login/login';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 /**
- * Modulo de Slide, es la primera vista de la aplicacion se muestra solo cuando se abre la app y no hay una sesion abierta
+ * Generated class for the SlidePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -17,9 +20,6 @@ export class SlidePage {
   constructor(public navCtrl: NavController, private screenOrientation:ScreenOrientation) {
     this.screenOrientation.lock('portrait');
   }
-  /**
-   * Navega al modulo de login
-   */
 goToHome(){
  
   this.navCtrl.setRoot(LoginPage);

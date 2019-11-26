@@ -1,10 +1,12 @@
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, LoadingController, Content } from 'ionic-angular';
 import { ResultadoImcPage } from '../resultado-imc/resultado-imc';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 /**
- * Modulo de modal IMC, recibe los datos para el calculo de IMC
+ * Generated class for the ModalImcPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -13,39 +15,20 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: 'modal-imc.html',
 })
 export class ModalImcPage {
-  //variables
-  IMC:FormGroup;
+  IMC = {"peso": "", "talla": "","cintura": "", "sexo": ""};
   public loader:any;
-  
-/**
- * se declara el formulario y se definen las validaciones 
- * @param navCtrl 
- * @param navParams 
- * @param view 
- * @param formBuilder libreria de formularios
- * @param loadingCtrl 
- * @param cdRef detector de cambios en un componente
- */
-  constructor(public navCtrl: NavController, public navParams: NavParams, private view:ViewController, private formBuilder:FormBuilder , public loadingCtrl:LoadingController, public cdRef:ChangeDetectorRef) {
-  this.IMC=this.formBuilder.group({
-        peso:['', [Validators.required, Validators.minLength(2)]],
-        talla: ['', [Validators.required, Validators.minLength(1)]],
-        cintura: ['', [Validators.required, Validators.minLength(2)]],
-        sexo: ['', [Validators.required, Validators.minLength(1)]]
-  });
-  
+ 
+  constructor(public navCtrl: NavController, public navParams: NavParams, private view:ViewController, public loadingCtrl:LoadingController) {
   }
  
-/**
- * realiza el calculo del IMC
- */
+
   calcularIMC(){
     let condicion:string;
     let riesgo:string;
-    let peso:any=this.IMC.value.peso;
-    let talla:any=this.IMC.value.talla;
-    let cintura:any=this.IMC.value.cintura;
-    let sexo=this.IMC.value.sexo;
+    let peso:any=this.IMC.peso;
+    let talla:any=this.IMC.talla;
+    let cintura:any=this.IMC.cintura;
+    let sexo=this.IMC.sexo;
 
     //calcular imc
     talla = talla * talla;
@@ -92,62 +75,26 @@ export class ModalImcPage {
     this.goToResultadoIMC();
   }
 
-  /**
-   * Navega hacia el modulo de resultado
-   */
   goToResultadoIMC(){
+   
+   
       this.navCtrl.push(ResultadoImcPage);
+    
   }
-/**
- * Close
- */
+
   presentloading(){
     this.loader= this.loadingCtrl.create({
       content : 'Cargando...'
     })
     this.loader.present();
   }
-/**
- * Cierra el modal
- */
+
   closeModal(){
     this.view.dismiss();
   }
-/**
- * @ignore
- */
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalImcPage');
   }
 
-
-/**
- * Detecta y limita el numero de caracteres en el componente
- * @param value componente de formulario
- */
-  maxPeso(value){
-    console.log(this.IMC.value.peso);
-    //manually launch change detection
-    this.cdRef.detectChanges();
-    
-    this.IMC.value.peso = value.length > 5 ? value.substring(0,5) : value;
-  }
-  /**
- * Detecta y limita el numero de caracteres en el componente
- * @param value componente de formulario
- */
-  maxTalla(value){
-    //manually launch change detection
-    this.cdRef.detectChanges();
-    this.IMC.value.talla = value.length > 4 ? value.substring(0,4) : value;
-  }
-/**
- * Detecta y limita el numero de caracteres en el componente
- * @param value componente de formulario
- */
-  maxCintura(value){
-    //manually launch change detection
-    this.cdRef.detectChanges();
-    this.IMC.value.cintura= value.length > 5 ? value.substring(0,5) : value;
-  }
 }

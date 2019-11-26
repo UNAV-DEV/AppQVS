@@ -8,7 +8,10 @@ import { SaludPage } from '../salud/salud';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 /**
- * Modulo de Menu evaluacion, se presentan los modulos perteneciente a la evaluacion de salud
+ * Generated class for the EvaluacionPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -17,16 +20,8 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
   templateUrl: 'evaluacion.html',
 })
 export class EvaluacionPage {
-  //variables
   loader:any;
   fondo:string;
-  /**
-   * 
-   * @param navCtrl 
-   * @param platform 
-   * @param loadingCrtl 
-   * @param screenOrientation Orientacion de la pantalla
-   */
   constructor(public navCtrl: NavController, platform:Platform, public loadingCrtl:LoadingController, private screenOrientation:ScreenOrientation) {
   
     this.screenOrientation.onChange().subscribe(
@@ -47,31 +42,18 @@ export class EvaluacionPage {
     
     
   }
-/**
- * Navega al modulo de la evaluacion de salud
- */
+
   goToSalud(){
     this.navCtrl.push(SaludPage);
   }
 
-  /**
-   * Navega al modulo de calculo de IMC
-   */
   goToIMC(){
     this.navCtrl.push(EvaluacionImcPage);
   }
-
-  /**
-   * Navega al modulo de menu de test de habitos
-   */
   goToTest(){
     this.navCtrl.push(TestPage);
   }
 
-
-/**
-    * @ignore
-    */
   ionViewDidLoad(screenOrientation:ScreenOrientation) {
     if (this.screenOrientation.type =='portrait-primary') {
       this.fondo='./assets/imgs/fevaluaciones.jpg'
@@ -81,17 +63,10 @@ export class EvaluacionPage {
     console.log('ionViewDidLoad EvaluacionPage');
   }
 
-
-  /**
-   * Cierra la sesion de la aplicacion y borra el token de las notificaciones, navega a la pagina de login
-   */
   cerrarsesion(){
     this.navCtrl.setRoot(LoginPage);
   }
 
-  /**
-    * @ignore
-    */
   presentLoading(){
 
     this.loader=this.loadingCrtl.create({

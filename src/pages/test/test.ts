@@ -9,10 +9,12 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform, LoadingController } from 'ionic-angular';
 
 import { IntrotestaguaPage } from '../introtestagua/introtestagua';
-import { TestAguaPage } from '../test-agua/test-agua';
 
 /**
- * Modulo test, es el menu de los test de los habitos
+ * Generated class for the TestPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -21,76 +23,51 @@ import { TestAguaPage } from '../test-agua/test-agua';
   templateUrl: 'test.html',
 })
 export class TestPage {
-  //variables
   loader:any;
-  /**
- * @ignore
- */
   constructor(public navCtrl: NavController, platform:Platform, public loadingCrtl:LoadingController) {
     this.presentLoading();
     platform.ready().then(()=>{
         this.loader.dismiss();
     });
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToTestAgua(){
-    this.navCtrl.push(TestAguaPage);
+    this.navCtrl.push(IntrotestaguaPage);
     
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToTestActitudPositiva(){
     this.navCtrl.push(TestActitudpositivaPage);
     
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToTestBienComer(){
     this.navCtrl.push(TestBiencomerPage);
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToActividadFisica(){
     this.navCtrl.push(TestActividadfisicaPage);
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToDescansoAdecuado(){
     this.navCtrl.push(TestDescansoadecuadoPage);
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToAutoControl(){
     this.navCtrl.push(TestAutocontrolPage);
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToDesayunarMas(){
     this.navCtrl.push(TestDesayunarmasPage);
   }
-/**
- * Navega al modulo del la portada del test y envia el numero del test
- */
+
   goToSerFeliz(){
     this.navCtrl.push(TestSerfelizPage);
   }
-  /**
-   * @ignore 
-   */
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestPage');
   }
-  /**
-   * @ignore 
-   */
   presentLoading(){
 
     this.loader=this.loadingCrtl.create({

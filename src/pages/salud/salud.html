@@ -19,44 +19,44 @@
   <ion-list id="formestsalud">
     <ion-item col-6 id="txtform" style="width: 49%" tooltip="¡Comencemos! ¡Ingresa tus datos!" [active]="estado" duration=4000 arrow positionV='top'>
         <ion-label stacked id="lblform"><strong>Presión Arterial</strong></ion-label>
-        <ion-input type="number"  placeholder="mmHg" [(ngModel)]='Datos.presion1'> </ion-input>
+        <ion-input type="number"  placeholder="mmHg"> </ion-input>
       </ion-item>
      
       <ion-item col-4 id="txtform" style="width: 49%">
         <ion-label stacked id="lblform"><strong></strong></ion-label>
-        <ion-input type="number" id="txtform"  placeholder="/   mmHg" [(ngModel)]='Datos.presion2'> </ion-input>
+        <ion-input type="number" id="txtform"  placeholder="/   mmHg"> </ion-input>
       </ion-item>
 
 
       <ion-item col-6 id="txtform" >
         <ion-label stacked id="lblform"><strong>Glucosa</strong></ion-label>
-        <ion-input type="number"  placeholder="mg/dl" [(ngModel)]='Datos.glucosa'> </ion-input>
+        <ion-input type="number"  placeholder="mg/dl"> </ion-input>
       </ion-item>
       
 
       <ion-item col-6 id="txtform" >
         <ion-label stacked id="lblform"><strong>Colesterol Total</strong></ion-label>
-        <ion-input type="number"  placeholder="mg/dl" [(ngModel)]='Datos.CT'> </ion-input>
+        <ion-input type="number"  placeholder="mg/dl"> </ion-input>
       </ion-item>
 
       <ion-item col-6 id="txtform" >
         <ion-label stacked id="lblform"><strong>Colesterol HDL</strong></ion-label>
-        <ion-input type="number"  placeholder="mg/dl" [(ngModel)]='Datos.CHDL'> </ion-input>
+        <ion-input type="number"  placeholder="mg/dl"> </ion-input>
       </ion-item>
     
       <ion-item col-6 id="txtform" >
         <ion-label stacked id="lblform"><strong>Colesterol LDL</strong></ion-label>
-        <ion-input type="number"  placeholder="mg/dl" [(ngModel)]='Datos.CLDL'> </ion-input>
+        <ion-input type="number"  placeholder="mg/dl"> </ion-input>
       </ion-item>
 
       <ion-item col-6 id="txtform" >
         <ion-label stacked id="lblform"><strong>Triglicéridos</strong></ion-label>
-        <ion-input type="number"  placeholder="mg/dl" [(ngModel)]='Datos.trigliceridos'> </ion-input>
+        <ion-input type="number"  placeholder="mg/dl"> </ion-input>
       </ion-item>
         
         <ion-item col-6 id="txtform">
             <ion-label id="lblform" stacked><strong>Sexo</strong></ion-label>
-            <ion-select  [(ngModel)]='Datos.sexo'>
+            <ion-select >
                 <ion-option value="masculino">Masculino</ion-option>
                 <ion-option value="femenino">Femenino</ion-option>
                
@@ -65,6 +65,6 @@
           
           
   </ion-list>
-  <button col-3 ion-button block style="margin-left: 37.5%" (click)="goToResultado()" >CALCULAR</button>
+  <button col-3 ion-button block style="margin-left: 37.5%" >CALCULAR</button>
   <img src="./assets/imgs/dr1.png" id="dr">
 </ion-content>

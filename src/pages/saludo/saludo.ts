@@ -3,10 +3,12 @@ import { IonicPage, NavController, Platform, LoadingController } from 'ionic-ang
 import {RestProvider} from '../../providers/rest/rest'
 import { EvaluacionPage } from '../evaluacion/evaluacion';
 import { MenuPrincipalPage } from '../menu-principal/menu-principal';
-import { TabsPage } from '../tabs/tabs';
 
 /**
- * Modulo Saludo, esta pagina se muestra despues de el login, dando un saludo al usuario
+ * Generated class for the SaludoPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -15,17 +17,9 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'saludo.html',
 })
 export class SaludoPage {
-  //varibles
   imagen:string;
   nombre:string;
   loader:any;
- /**
-  * Se recibe el sexo y el nombre del usuario y se define el diseno
-  * @param navCtrl 
-  * @param loadingCtrl 
-  * @param rest 
-  * @param platform 
-  */
   constructor(public navCtrl: NavController, public loadingCtrl:LoadingController, public rest:RestProvider,platform:Platform) {
     this.presentLoading();
     platform.ready().then(()=>{
@@ -44,15 +38,11 @@ export class SaludoPage {
      this.loader.dismiss();
     });
   }
-/**
- * Navega al modulo de Tabs
- */
+
   goToMenu(){
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot(MenuPrincipalPage);
   }
-/**
- * @ignore
- */
+
   presentLoading(){
     this.loader=this.loadingCtrl.create({
       content:'Cargando...'
@@ -60,9 +50,7 @@ export class SaludoPage {
     this.loader.present();
 
   }
-/**
- * @ignore
- */
+
   ionViewDidLoad() {
     
     console.log('ionViewDidLoad SaludoPage');

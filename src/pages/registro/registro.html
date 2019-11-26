@@ -109,16 +109,11 @@
                         <p color = "danger" *ngIf="datos.get('religion').hasError('required')">*Campo Requerido</p>
                         <p color="danger" *ngIf="datos.get('religion').hasError('pattern')">*Solo se admiten letras</p>
                       </ion-item>
-
-                       <ion-item>
-                        <ion-label color="primary" floating>Código de empresa/Grupo asociado</ion-label>
-                        <ion-input formControlName="empresa"></ion-input>
-                      </ion-item>
-                  
+        
                       <ion-item>
                           <button ion-button block  type="submit" [disabled]="!datos.valid" >REGISTRAR</button>
                       </ion-item>
-                      <p id="AvisoPrivacidad" style="font-size:0.9em"><strong><a href="https://quierovivirsano.org/aviso-de-privacidad/" id="AvisoPrivacidad">AVISO DE PRIVACIDAD.</a></strong> Ponemos a tus disposición los términos del aviso de privacidad de nuestros servicios.</p>
+                      <p id="AvisoPrivacidad" style="font-size:0.9em"><strong><a href="http://ciafeb.com/" id="AvisoPrivacidad">AVISO DE PRIVACIDAD.</a></strong> Ponemos a tus disposición los términos del aviso de privacidad de nuestros servicios.</p>
               </ion-list>
         </form>
               

@@ -3,10 +3,12 @@ import { IonicPage, NavController, NavParams, LoadingController, Platform } from
 import { EvaluacionPage } from '../evaluacion/evaluacion';
 import { MenuPrincipalPage } from '../menu-principal/menu-principal';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
-import { TabsPage } from '../tabs/tabs';
 
 /**
- * Modulo de perimetro abdominal, se presenta el resultado segun el IMC
+ * Generated class for the PerimetroAbdominalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -15,7 +17,6 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'perimetro-abdominal.html',
 })
 export class PerimetroAbdominalPage {
-  //variables
   loader:any;
   fondoperimetro:string;
   nombre:string;
@@ -24,13 +25,6 @@ export class PerimetroAbdominalPage {
   riesgo:string;
   lista:any[]=[];
   recomendacion:string;
-  /**
-   * Se obtiene el resultado y se defienen los datos y el diseno segun lo obtenido
-   * @param navCtrl 
-   * @param loadingCtrl 
-   * @param platform 
-   * @param screenOrientation 
-   */
   constructor(public navCtrl: NavController, public loadingCtrl:LoadingController, platform:Platform, public screenOrientation:ScreenOrientation) {
     this.screenOrientation.lock('portrait');
     this.presentLoading();
@@ -97,15 +91,10 @@ export class PerimetroAbdominalPage {
 
   console.log(this.lista);
   }
-/**
- * @ignore
- */
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerimetroAbdominalPage');
   }
-  /**
- * @ignore
- */
   presentLoading(){
 
     this.loader=this.loadingCtrl.create({
@@ -115,11 +104,9 @@ export class PerimetroAbdominalPage {
     this.loader.present();
   }
 
-/**
- * Navega al modulo principal Tabs
- */
+
   goToMenu(){
-    this.navCtrl.setRoot(TabsPage);
-    
+    this.navCtrl.setRoot(MenuPrincipalPage);
+    this.navCtrl.push(EvaluacionPage);
   }
 }

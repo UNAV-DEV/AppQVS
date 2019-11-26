@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Platform, ToastController } from 'ionic-angular';
 
 /**
- * Modulo de Test de Actividad Fisica, realiza el test de este habito
+ * Generated class for the TestActividadfisicaPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -14,7 +17,7 @@ import { IonicPage, NavController, NavParams, LoadingController, Platform, Toast
   templateUrl: 'test-actividadfisica.html',
 })
 export class TestActividadfisicaPage {
-//variables
+
   
   array:string []=["1- ¿Realizo al menos 30 minutos de actividad física al día?", 
   "2-	¿Incorporo a mi rutina diaria nuevas maneras de hacer actividad física (dejar el carro más lejos, caminar al trabajo, usar bicicleta como transporte, subir y bajar escaleras)?",
@@ -50,9 +53,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
       });*/
     
   }
-/**
- * metodo asignado al boton No del test, suma puntos al acumulado para el calculo del resultado 
- */
+
   No(){
   console.log(this.fechaActual);
     this.resultado=this.resultado+1;
@@ -63,9 +64,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
     this.goToTest();
   }
   }
-  /**
- * metodo asignado al boton Rara vez del test, suma puntos al acumulado para el calculo del resultado 
- */
+  
   Rara(){
    
     this.resultado=this.resultado+2;
@@ -77,9 +76,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
   }
   }
   
-/**
- * metodo asignado al boton Aveces del test, suma puntos al acumulado para el calculo del resultado 
- */
+
   Aveces(){   
     this.resultado=this.resultado+3;
     this.i=this.i+1;
@@ -89,9 +86,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
       this.goToTest();
     }
   }
-/**
- * metodo asignado al boton Frecuentemente del test, suma puntos al acumulado para el calculo del resultado 
- */
+
   Frecuentemente(){
     this.resultado=this.resultado+4;
     this.i=this.i+1;
@@ -101,9 +96,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
       this.goToTest();
     }
   }
-/**
- * metodo asignado al boton Si del test, suma puntos al acumulado para el calculo del resultado 
- */
+
   Si(){
     this.resultado=this.resultado+5;
     this.i=this.i+1;
@@ -113,9 +106,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
       this.goToTest();
     }
     }
- /**
-     * Calcula el resultado, manda a llamar al metodo para registrar en la base de datos, navega al modulo de resultado del test con los datos obtenidos
-     */
+
   goToTest(){
     //this.navCtrl.push(TestPage);
    
@@ -127,32 +118,32 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
     window.localStorage.setItem('rtestagua',this.resultadotest);
     this.datosTest.resultado=this.resultadotest;
 
-    this.registrartest();
+    this.registrartest()
       
      if(this.resultadotest >= 91){
      this.test= { test:"Actividad Física",
        resultado:"¡Excelente!",
-        contenido:'¡Felicitaciones! casi todos los aspectos de tu vida, con respecto a este hábito, son saludables. Solo unos pocos cambios y lograrás una vida aún más saludable. La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la "Actividad Física" con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
+        contenido:'¡Felicitaciones! casi todos los aspectos de tu vida, con respecto a este hábito, son saludables. Solo unos pocos cambios y lograrás una vida aún más saludable. La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la Actividad Física con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
         color:"#185417"};
     }else  if(this.resultadotest < 91 && this.resultadotest >=81){
       this.test={test:"Actividad Física",
         resultado:"¡Muy Bueno!",
-      contenido:'¡Muy bien! muchos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar nuevos cambios que te acerquen a una vida más saludable. ¡Puedes hacerlo! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la "Actividad Física" con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
+      contenido:'¡Muy bien! muchos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar nuevos cambios que te acerquen a una vida más saludable. ¡Puedes hacerlo! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la Actividad Física con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
       color:"#458f31"};
     }else  if(this.resultadotest < 81 && this.resultadotest >=71){
       this.test={test:"Actividad Física",
         resultado:"¡Bueno!",
-      contenido:'¡Bien! algunos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar unos pocos cambios que te acerquen aún más a una vida más saludable. Puedes hacerlo. ¡Tú eres protagonista de tu vida! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la "Actividad Física" con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
+      contenido:'¡Bien! algunos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar unos pocos cambios que te acerquen aún más a una vida más saludable. Puedes hacerlo. ¡Tú eres protagonista de tu vida! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la Actividad Física con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
       color:"#e1c206"};
     }else  if(this.resultadotest < 71 && this.resultadotest >=61){
       this.test={test:"Actividad Física",
         resultado:"¡Malo!",
-      contenido:'Estás un poco alejado de una vida saludable en este hábito. Revisa tu estilo de vida y haz cambios que te acerquen a una vida más saludable. Lo importante es que transformes tu realidad. Puedes hacerlo. ¡Tú eres protagonista de tu vida! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la "Actividad Física" con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
+      contenido:'Estás un poco alejado de una vida saludable en este hábito. Revisa tu estilo de vida y haz cambios que te acerquen a una vida más saludable. Lo importante es que transformes tu realidad. Puedes hacerlo. ¡Tú eres protagonista de tu vida! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la Actividad Física con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
       color:"#d54b00"};
     }else if(this.resultadotest < 61 ){
       this.test={test:"Actividad Física",
         resultado:"¡Muy Malo!",
-      contenido:'¡Es urgente que revises tu estilo de vida! Haz los cambios necesarios para lograr una vida saludable. Transforma tu realidad, ¡puedes lograrlo! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la "Actividad Física" con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
+      contenido:'¡Es urgente que revises tu estilo de vida! Haz los cambios necesarios para lograr una vida saludable. Transforma tu realidad, ¡puedes lograrlo! La Actividad Física te ayuda a mejorar todas las dimensiones de tu salud. Es uno de los hábitos que, aunque te cueste adquirir, más puede impactar sobre tu salud. No debes de confundir la Actividad Física con el "ejercicio", el cual es incluido dentro de la misma, junto con las otras actividades que incluyen movimiento corporal y se realizan como parte de los momentos de juego, del trabajo, de formas de transporte activas, de las tareas domésticas y de actividades recreativas.',
       color:"#c40404"};
     }
       this.navCtrl.setRoot(EvaluacionPage);
@@ -160,9 +151,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
    
   }
 
-/**
- * @ignore
- */
+
   presentLoading(){
 
     this.loader=this.loadingCtrl.create({
@@ -173,9 +162,6 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
   }
 
 //registro resultados del test
-/**
- * Registra el test mediante el archivo REST
- */
   registrartest(){
     console.log(this.datosTest);
     this.showLoader();
@@ -201,15 +187,10 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
       this.presentToast(err);
     });
   }
-  /**
- * @ignore
- */
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestAguaPage');
   }
-/**
- * @ignore
- */
+
   showLoader(){
     this.loading = this.loadingCtrl.create({
         content: 'Guardando...'
@@ -217,9 +198,7 @@ imagen:string []=["./assets/imgs/actividadfisica1.png","./assets/imgs/actividadf
 
     this.loading.present();
   }
-/**
- * @ignore
- */
+
   presentToast(msg) {
     let toast = this.toastCtrl.create({
       message: msg,

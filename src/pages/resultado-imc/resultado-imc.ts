@@ -4,7 +4,10 @@ import { PerimetroAbdominalPage } from '../perimetro-abdominal/perimetro-abdomin
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 /**
- * Modulo Resultado IMC, presenta el resultado del calculo del IMC
+ * Generated class for the ResultadoImcPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -15,7 +18,6 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 })
 export class ResultadoImcPage {
-  //variables
   fondoimc: string;
   nombre: string;
   imagenpeso: string;
@@ -24,20 +26,13 @@ export class ResultadoImcPage {
   recomendacion: string;
   lista1: any[] = [];
   loader: any;
-/**
- * Se define el diseno y listas de recomendaciones de acuerdo al resultado obtenido 
- * @param platform 
- * @param loadingCtrl 
- * @param navCtrl 
- * @param screenOrientation 
- * @param navParams 
- */
+
   constructor(platform: Platform, public loadingCtrl: LoadingController, public navCtrl: NavController, public screenOrientation:ScreenOrientation, public navParams: NavParams) {
     this.screenOrientation.lock('portrait');
     this.presentLoading();
     platform.ready().then(() => {
 
-      //Seleccionar fondos
+      //Seleccionar fondos\
       if (window.localStorage.getItem('sexo') == "masculino") {
         this.fondoimc = "./assets/imgs/fimch.jpg";
       } else if (window.localStorage.getItem('sexo') == "femenino") {
@@ -186,23 +181,16 @@ export class ResultadoImcPage {
     this.loader.dismiss();
   }
 
-  /**
-   * @ignore
-   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResultadoImcPage');
   }
 
 
-  /**
-   * Navega al modulo de Perimetro abdominal
-   */
+
   goToPerimetroAbdominal() {
     this.navCtrl.push(PerimetroAbdominalPage);
   }
-/**
- * @ignore
- */
+
   presentLoading() {
 
     this.loader = this.loadingCtrl.create({

@@ -6,7 +6,10 @@ import { LoadingController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
 /**
- * Modulo con el mensaje de bienvenida, se presenta solo una vez despues de registrarse en la aplicacion
+ * Generated class for the BienvenidaPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -15,26 +18,17 @@ import { RestProvider } from '../../providers/rest/rest';
   templateUrl: 'bienvenida.html',
 })
 export class BienvenidaPage {
-  //variables
   fondo:string;
   nombre:string;
   sexo:string;
   loader: any;
   data:any;
   loading:any;
- 
-  /**
-   * Se obtiene el nombre y el sexo de la persona y se define el diseno
-   * @param platform 
-   * @param navCtrl 
-   * @param loadingCtrl 
-   * @param restprovider archivo rest para coneccion con el servidor
-   * @param toastCtrl 
-   */
+  userData = {"password": window.localStorage.getItem('password'), "correo":window.localStorage.getItem("correo")};
   constructor(public platform:Platform, public navCtrl: NavController,  public loadingCtrl:LoadingController, public restprovider:RestProvider, 
     private toastCtrl: ToastController) {
    this.presentLoading();
-   
+   this.doLogin();
    platform.ready().then(()=>{
     this.sexo=window.localStorage.getItem('sexo');
     this.nombre=window.localStorage.getItem('nombre');
@@ -51,15 +45,11 @@ export class BienvenidaPage {
   });
   this.loader.dismiss();
   }
-   /**
-    * @ignore
-    */
+   
   ionViewDidLoad() {
     console.log('ionViewDidLoad BienvenidaPage');
   }
-/**
-    * @ignore
-    */
+
   presentLoading() {
     
     this.loader = this.loadingCtrl.create({
@@ -71,10 +61,21 @@ export class BienvenidaPage {
   }
 
 
+  doLogin() {
+    this.showLoader();
+    this.restprovider.login(this.userData).then((result) => {
+      this.loading.dismiss();
+      this.data = result;
+      console.log(this.data.nombre);
+      window.localStorage.setItem('id',this.data.id);
+      
+      }, (err) => {
+      this.loading.dismiss();
+     
+    });
+  }
 
-/**
-    * @ignore
-    */
+
   showLoader(){
     this.loading = this.loadingCtrl.create({
         content: 'Autenticando...'
@@ -83,9 +84,7 @@ export class BienvenidaPage {
     this.loading.present();
   }
 
- /**
-  * navega hacia el modulo de Instrucciones
-  */
+ 
 goToInstrucciones(){
   this.navCtrl.setRoot(InstruccionesPage);
 }

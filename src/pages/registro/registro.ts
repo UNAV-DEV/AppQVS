@@ -3,9 +3,11 @@ import { IonicPage, NavController, LoadingController, ToastController } from 'io
 import { RestProvider } from '../../providers/rest/rest';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { BienvenidaPage } from '../bienvenida/bienvenida';
-import { OneSignal } from '@ionic-native/onesignal';
 /**
- * Modulo de registro, muestra el formulario de registro.
+ * Generated class for the RegistroPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -18,33 +20,16 @@ import { OneSignal } from '@ionic-native/onesignal';
 
 
 export class RegistroPage {
-  //variables
   registro = {};
   private datos:FormGroup;
   data:any;
   mensaje:any;
   loading:any;
-  token:string;
-  /**
-   * Obtiene el token del dispositivo para las notificacion push onesignal, y asignan las validaciones del formulario
-   * @param navCtrl 
-   * @param restprovider 
-   * @param formBuilder libreria de formulario
-   * @param loadingCtrl 
-   * @param toastCtrl 
-   * @param oneSignal libreria de notificaciones
-   */
   constructor(public navCtrl: NavController, public restprovider:RestProvider, private formBuilder: FormBuilder, 
-    public loadingCtrl: LoadingController, private toastCtrl: ToastController, private oneSignal:OneSignal) {
+    public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
+
 
       
-      
-      
-      this.oneSignal.getIds().then(res=>{
-        this.token=res.userId;
-        
-      });
-
       this.datos = this.formBuilder.group({
         nombre:['', [Validators.required, Validators.pattern('[a-zA-Z áéíóú]*')]],
         edad: ['', Validators.required],
@@ -55,56 +40,19 @@ export class RegistroPage {
         estado: ['',[Validators.required, Validators.pattern('[a-zA-Z áéíóú]*')]],
         municipio: ['', [Validators.required, Validators.pattern('[a-zA-Z áéíóú]*')]],
         religion: ['', [Validators.required, Validators.pattern('[a-zA-Z áéíóú]*')]],
-        password: ['', [Validators.required, Validators.minLength(6)]],
-        empresa: [''],
-        token: [''] 
-
+        password: ['', [Validators.required, Validators.minLength(6)]]
       });
-     
   }
-  /**
-   * @ignore
-   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegistroPage');
-    
   }
-
-  /**
-   * Envia los datos del registro al servidor mediante el archivo rest
-   */
-  signup(){
-    this.oneSignal.getIds().then(res=>{
-      this.token=res.userId;
-    });
-    this.datos.value.token=this.token;
-  
-    console.log('estos son los datos que se envian ' + this.datos.value.empresa);
-    this.showLoader();
-    this.restprovider.registro(this.datos.value).then((result)=>{ 
-      this.loading.dismiss();
+  signup() {
+    this.restprovider.reg(this.datos.value).then((result)=>{
       this.data=result;
-      window.localStorage.setItem('correo', this.data.correo);
-      window.localStorage.setItem('password', this.data.password);
-      window.localStorage.setItem('token',this.data.token);
-      window.localStorage.setItem('nombre',this.data.nombre);
-      window.localStorage.setItem('sexo', this.data.sexo);
-      window.localStorage.setItem('id', this.data.id);
-      this.mensaje=this.data.exito;
-      console.log('este es el id' + window.localStorage.getItem('id'));
-      if(this.mensaje=="Registro exitoso"){
-        this.presentToast(this.mensaje);
-        this.goToBienvenida();
-        
-
-      }else{
-        this.presentToast(this.mensaje);
-      }
-      
-    console.log(this.data);},
+      console.log(this.data);},
       (err) => {
         this.loading.dismiss();
-        this.presentToast("error");
+        this.presentToast(err);
       
     });
 
@@ -138,15 +86,11 @@ export class RegistroPage {
     });*/
   }
 
-  /**
-   * Navega al modulo de bienvenida
-   */
+  
   goToBienvenida(){
     this.navCtrl.push(BienvenidaPage);
   }
-/**
- * @ignore
- */
+
   showLoader(){
     this.loading = this.loadingCtrl.create({
         content: 'Autenticando...'
@@ -155,10 +99,6 @@ export class RegistroPage {
     this.loading.present();
   }
 
-  /**
-   * @ignore
-   * @param msg mensaje que se presente en toast
-   */
   presentToast(msg) {
     let toast = this.toastCtrl.create({
       message: msg,

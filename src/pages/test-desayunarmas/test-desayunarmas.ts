@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform, ToastController, LoadingController } from 'ionic-angular';
 
 /**
- * Modulo test desayunar mas y cenar menos, contiene el test de este habito
+ * Generated class for the TestDesayunarmasPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -15,7 +18,7 @@ import { IonicPage, NavController, NavParams, Platform, ToastController, Loading
 })
 export class TestDesayunarmasPage {
 
- //variables
+ 
   array:string []=["1- ¿Tomo un desayuno saludable todos los días?", 
   "2-	¿Planeo el menú de desayunos y cenas de la semana basada en alimentos saludables?",
   "3-	¿Considero mi desayuno la comida más importante del día?",
@@ -42,14 +45,6 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
   test={};
   datosTest= {"id" : window.localStorage.getItem('id'), "id_habito" : 7, "resultado" : "", "fecha":this.fechaActual, "registro":"test1"};
   loader:any;
-  /**
-   * @ignore
-   * @param navCtrl 
-   * @param platform 
-   * @param restprovider 
-   * @param loadingCtrl 
-   * @param toastCtrl 
-   */
   constructor(public navCtrl: NavController, platform:Platform,  public restprovider:RestProvider, 
     public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
     /*  this.presentLoading();
@@ -58,9 +53,7 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
       });*/
     
   }
-/**
- * metodo asignado al boton No del test, suma puntos al acumulado para el calculo del resultado 
- */
+
   No(){
     console.log(this.fechaActual);
       if( this.i == 7 || this.i ==8){
@@ -73,9 +66,7 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
       this.goToTest();
     }
     }
-    /**
- * metodo asignado al boton Rara vez del test, suma puntos al acumulado para el calculo del resultado 
- */
+    
     Rara(){
      
         if( this.i == 7 || this.i ==8){
@@ -88,9 +79,7 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
           this.goToTest();
         }
     }
-  /**
- * metodo asignado al boton Aveces del test, suma puntos al acumulado para el calculo del resultado 
- */
+  
     Aveces(){
      
         if( this.i == 7 || this.i ==8){
@@ -103,9 +92,7 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
           this.goToTest();
         }
     }
-  /**
- * metodo asignado al boton Frecuentemente del test, suma puntos al acumulado para el calculo del resultado 
- */
+  
     Frecuentemente(){
      
         if( this.i == 7 || this.i ==8){
@@ -118,9 +105,7 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
           this.goToTest();
         }
     }
-  /**
- * metodo asignado al boton Si del test, suma puntos al acumulado para el calculo del resultado 
- */
+  
     Si(){
      
         if( this.i == 7 || this.i ==8){
@@ -134,9 +119,6 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
           this.goToTest();
         }
       }
-       /**
-     * Calcula el resultado, manda a llamar al metodo para registrar en la base de datos, navega al modulo de resultado del test con los datos obtenidos
-     */
   goToTest(){
     //this.navCtrl.push(TestPage);
    
@@ -148,36 +130,36 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
     window.localStorage.setItem('rtestagua',this.resultadotest);
     this.datosTest.resultado=this.resultadotest;
 
-    this.registrartest();
+    this.registrartest()
       
      if(this.resultadotest >= 91){
      this.test= { test:"Desayunar Más y Cenar Menos",
        resultado:"¡Excelente!",
-        contenido:'¡Felicitaciones! casi todos los aspectos de tu vida, con respecto a este hábito, son saludables.  Solo unos pocos cambios y lograrás una vida aún más saludable.  El hábito de "Desayunar Más y Cenar Menos" le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ',
+        contenido:"¡Felicitaciones! casi todos los aspectos de tu vida, con respecto a este hábito, son saludables.  Solo unos pocos cambios y lograrás una vida aún más saludable.  El hábito de ´´Desayunar Más y Cenar Menos´´ le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ",
         
         color:"#185417"};
     }else  if(this.resultadotest < 91 && this.resultadotest >=81){
       this.test={test:"Desayunar Más y Cenar Menos",
         resultado:"¡Muy Bueno!",
-      contenido:'¡Muy bien! muchos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar nuevos cambios que te acerquen a una vida más saludable. ¡Puedes hacerlo! El hábito de "Desayunar Más y Cenar Menos" le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ',
+      contenido:"¡Muy bien! muchos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar nuevos cambios que te acerquen a una vida más saludable. ¡Puedes hacerlo! El hábito de ´´Desayunar Más y Cenar Menos´´ le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ",
       
       color:"#458f31"};
     }else  if(this.resultadotest < 81 && this.resultadotest >=71){
       this.test={test:"Desayunar Más y Cenar Menos",
         resultado:"¡Bueno!",
-      contenido:'¡Bien! algunos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar unos pocos cambios que te acerquen aún más a una vida más saludable. Puedes hacerlo. ¡Tú eres protagonista de tu vida! El hábito de "Desayunar Más y Cenar Menos" le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ',
+      contenido:"¡Bien! algunos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar unos pocos cambios que te acerquen aún más a una vida más saludable. Puedes hacerlo. ¡Tú eres protagonista de tu vida! El hábito de ´´Desayunar Más y Cenar Menos´´ le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ",
       
       color:"#e1c206"};
     }else  if(this.resultadotest < 71 && this.resultadotest >=61){
       this.test={test:"Desayunar Más y Cenar Menos",
         resultado:"¡Malo!",
-      contenido:'Estás un poco alejado de una vida saludable en este hábito. Revisa tu estilo de vida y haz cambios que te acerquen a una vida más saludable. Lo importante es que transformes tu realidad. Puedes hacerlo. ¡Tú eres protagonista de tu vida! El hábito de "Desayunar Más y Cenar Menos" le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ',
+      contenido:"Estás un poco alejado de una vida saludable en este hábito. Revisa tu estilo de vida y haz cambios que te acerquen a una vida más saludable. Lo importante es que transformes tu realidad. Puedes hacerlo. ¡Tú eres protagonista de tu vida! El hábito de ´´Desayunar Más y Cenar Menos´´ le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ",
       
       color:"#d54b00"};
     }else if(this.resultadotest < 61 ){
       this.test={test:"Desayunar Más y Cenar Menos",
         resultado:"¡Muy Malo!",
-      contenido:'¡Es urgente que revises tu estilo de vida! Haz los cambios necesarios para lograr una vida saludable. Transforma tu realidad, ¡puedes lograrlo! El hábito de "Desayunar Más y Cenar Menos" le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ',
+      contenido:"¡Es urgente que revises tu estilo de vida! Haz los cambios necesarios para lograr una vida saludable. Transforma tu realidad, ¡puedes lograrlo! El hábito de ´´Desayunar Más y Cenar Menos´´ le da al desayuno nutritivo la prioridad e importancia que merece. Al practicarlo puedes lograr un mejor desarrollo y rendimiento integral de tu organismo y reducir la ingesta alimenticia de la cena. Recuerda que debes de desayunar como rey, comer como príncipe y cenar como mendigo. ",
       
       color:"#c40404"};
     }
@@ -197,9 +179,6 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
   }
 
 //registro resultados del test
-/**
- * Registra el test mediante el archivo REST
- */
   registrartest(){
     console.log(this.datosTest);
     this.showLoader();
@@ -225,15 +204,10 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
       this.presentToast(err);
     });
   }
-  /**
- * @ignore
- */
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestAguaPage');
   }
-/**
- * @ignore
- */
+
   showLoader(){
     this.loading = this.loadingCtrl.create({
         content: 'Guardando...'
@@ -241,9 +215,7 @@ imagen:string []=["./assets/imgs/desayunarmas1.png","./assets/imgs/desayunarmas2
 
     this.loading.present();
   }
-/**
- * @ignore
- */
+
   presentToast(msg) {
     let toast = this.toastCtrl.create({
       message: msg,

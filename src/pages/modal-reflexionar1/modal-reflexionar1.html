@@ -7,15 +7,15 @@
 
 
 
-<ion-content [ngStyle]="{'background-color': '' + fondo + '' }">
+<ion-content style="background-color: #26c9dc;">
  <img src="./assets/imgs/parareflexionar.png" id="parareflexionarmodal">
  <img src="./assets/imgs/logohabitos.png" id="logohpr">
  <img src="./assets/imgs/logo.png" id="logopr">
- <h6 id="txtreflexion" [ngStyle]="{'color': '' + linea + '' }" > {{reflexion[dia].ref}}</h6>
-<img src="./assets/imgs/habito{{habito}}/parareflexionar{{dia+1}}.png" id="imgreflexion">
+ <h6 id="txtreflexion" > {{reflexion[dia].ref}}</h6>
+<img src="./assets/imgs/parareflexionar{{dia+1}}.png" id="imgreflexion">
 
 </ion-content>
-<ion-footer id="feet">
+<ion-footer id="feetr">
       
   <button ion-button full color="primary" (click)="Cerrar()">¡ENTENDIDO!</button>
  

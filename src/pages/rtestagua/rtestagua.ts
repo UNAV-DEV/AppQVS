@@ -6,10 +6,12 @@ import { Compromisohbt1Page } from '../compromisohbt1/compromisohbt1';
 import { Compromisohbt1PageModule } from '../compromisohbt1/compromisohbt1.module';
 import { CompromisoPage } from '../compromiso/compromiso';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
-import { TabsPage } from '../tabs/tabs';
 
 /**
- * Modulo resultado test, Muestra los resultados de los test
+ * Generated class for the RtestaguaPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -18,24 +20,13 @@ import { TabsPage } from '../tabs/tabs';
   templateUrl: 'rtestagua.html',
 })
 export class RtestaguaPage {
-  //variables
   resultado:string;
   promedio:any=window.localStorage.getItem('rtestagua');
   color:any;
   contenido:any;
   fondo:string;
   loader:any;
-  test:string;
-
-  /**
-   * @ignore
-   * @param navCtrl 
-   * @param navParmas 
-   * @param loadingCtrl 
-   * @param platform 
-   * @param screenOrientation 
-   */
-  constructor(public navCtrl: NavController, public navParmas:NavParams ,public loadingCtrl:LoadingController, platform:Platform,private screenOrientation:ScreenOrientation) {
+  constructor(public navCtrl: NavController, public loadingCtrl:LoadingController, platform:Platform,private screenOrientation:ScreenOrientation) {
   
     this.screenOrientation.onChange().subscribe(
       () => {
@@ -53,17 +44,30 @@ export class RtestaguaPage {
         this.loader.dismiss();
     });
 
-    
+    if(this.promedio >= 91){
+      this.resultado = "¡Excelente!";
+      this.color = "#185417";
+      this.contenido ="¡Felicitaciones! casi todos los aspectos de tu vida, con respecto a este hábito, son saludables. Solo unos pocos cambios y lograrás una vida aún más saludable. El hábito de Beber Agua Natural te ayudará a mantenerte bien hidratado durante el día. La mayor parte de nuestro peso es agua y es vital para que nuestro organismo funcione de la mejor manera. Adquirir y mantener este Hábito Saludable beneficiará a tu cuerpo en todas sus dimensiones (física, mental, social y espiritual).";
+    }else  if(this.promedio < 91 && this.promedio >=81){
+      this.resultado = "¡Muy Bueno!";
+      this.color = "#458f31"; 
+      this.contenido ="¡Muy bien! muchos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar nuevos cambios que te acerquen a una vida más saludable. ¡Puedes hacerlo! El hábito de Beber Agua Natural te ayudará a mantenerte bien hidratado durante el día. La mayor parte de nuestro peso es agua y es vital para que nuestro organismo funcione de la mejor manera. Adquirir y mantener este Hábito Saludable beneficiará a tu cuerpo en todas sus dimensiones (física, mental, social y espiritual). ";
+    }else  if(this.promedio < 81 && this.promedio >=71){
+      this.resultado = "¡Bueno!";
+      this.color = "#e1c206";
+      this.contenido ="¡Bien! algunos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar unos pocos cambios que te acerquen aún más a una vida más saludable. Puedes hacerlo. ¡Tú eres protagonista de tu vida!. El hábito de Beber Agua Natural te ayudará a mantenerte bien hidratado durante el día. La mayor parte de nuestro peso es agua y es vital para que nuestro organismo funcione de la mejor manera. Adquirir y mantener este Hábito Saludable beneficiará a tu cuerpo en todas sus dimensiones (física, mental, social y espiritual).";
+    }else  if(this.promedio < 71 && this.promedio >=61){
+      this.resultado = "¡Malo!";
+      this.color = "#d54b00";
+      this.contenido ="Estás un poco alejado de una vida saludable en este hábito. Revisa tu estilo de vida y haz cambios que te acerquen a una vida más saludable. Lo importante es que transformes tu realidad. Puedes hacerlo. ¡Tú eres protagonista de tu vida! El hábito de Beber Agua Natural te ayudará a mantenerte bien hidratado durante el día. La mayor parte de nuestro peso es agua y es vital para que nuestro organismo funcione de la mejor manera. Adquirir y mantener este Hábito Saludable beneficiará a tu cuerpo en todas sus dimensiones (física, mental, social y espiritual).";
+    }else  if(this.promedio < 61 ){
+      this.resultado = "¡Muy Malo!";
+      this.color = "#c40404";
+      this.contenido ="¡Es urgente que revises tu estilo de vida! Haz los cambios necesarios para lograr una vida saludable. Transforma tu realidad, ¡puedes lograrlo! El hábito de Beber Agua Natural te ayudará a mantenerte bien hidratado durante el día. La mayor parte de nuestro peso es agua y es vital para que nuestro organismo funcione de la mejor manera. Adquirir y mantener este Hábito Saludable beneficiará a tu cuerpo en todas sus dimensiones (física, mental, social y espiritual).";
+    }
   }
-/**
- * Recibe los datos del resultado
- * @param screenOrientation 
- */
+
   ionViewDidLoad(screenOrientation:ScreenOrientation) {
-    this.test=this.navParmas.data.test;
-    this.resultado=this.navParmas.data.resultado;
-    this.contenido=this.navParmas.data.contenido;
-    this.color=this.navParmas.data.color;
     if (this.screenOrientation.type =='portrait-primary' || this.screenOrientation.type=='portrait-secondary') {
       this.fondo='./assets/imgs/frtestagua.jpg'
     }else if (this.screenOrientation.type=='landscape-primary' || this.screenOrientation.type=='landscape-secondary') {
@@ -71,9 +75,7 @@ export class RtestaguaPage {
     }
     console.log('ionViewDidLoad RtestaguaPage');
   }
-/**
- * @ignore
- */
+
   presentLoading(){
 
     this.loader=this.loadingCtrl.create({
@@ -82,15 +84,11 @@ export class RtestaguaPage {
     });
     this.loader.present();
   }
-/**
- * Revisa si el usuario es es nuevo en realizar el test, si lo es lo envia al compromiso del habito, sino lo es lo envia al menu de evaluacion de salud
- */
+
   goToMenu(){
-    this.navCtrl.setRoot(TabsPage);
+    this.navCtrl.setRoot(MenuPrincipalPage);
     if(window.sessionStorage.getItem("consulta")=='nuevo'){
-      let habito={};
-      habito={test:this.test};
-    this.navCtrl.push(CompromisoPage, habito);
+    this.navCtrl.push(CompromisoPage);
     }else{
       this.navCtrl.push(EvaluacionPage);
     }

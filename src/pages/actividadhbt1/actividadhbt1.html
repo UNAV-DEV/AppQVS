@@ -19,13 +19,13 @@
     <img id="img8hsactividad" src="./assets/imgs/logohabitos.png">
     
    </div>
-   <img id="imgbeberagua" src="./assets/imgs/habito{{habito}}/titulo.png">
-   <h3 id="NoTeEsperes" [ngStyle]="{'color': '' + color + ''}"><strong>{{titulo}}</strong></h3>
+   <img id="imgbeberagua" src="./assets/imgs/beberaguanatural.png">
+   <h3 id="NoTeEsperes"><strong>¡NO TE ESPERES A TENER SER!</strong></h3>
   
-   <h1 id="dia" [ngStyle]="{'color': '' + color + ''}">DÍA {{dia+1}}</h1><br>
-   <h6 id="txtactividad" [ngStyle]="{'color': '' + color + ''}"> {{actividad[dia].act}}</h6>
+   <h1 id="dia">DÍA {{dia+1}}</h1><br>
+   <h6 id="txtactividad" > {{actividad[dia].act}}</h6>
    <div id="opcioneshbt1">
-      <img id="personahbt1" src="./assets/imgs/habito{{habito}}/persona{{dia+1}}.png">
+      <img id="personahbt1" src="./assets/imgs/fotoagua{{dia+1}}.png">
   <div id="menuhbt">
     <input type="image" id="opchabito1" src="./assets/imgs/parareflexionar.png" (click)="goToReflexionar()"><br>
     <input type="image" id="opchabito1" src="./assets/imgs/tips.png" (click)="goToTips()"><br>

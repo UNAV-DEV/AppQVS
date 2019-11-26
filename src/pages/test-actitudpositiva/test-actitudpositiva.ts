@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, Platform, ToastController } from 'ionic-angular';
 
 /**
- * Modulo test del actitud positiva, contiene del test del habito
+ * Generated class for the TestActitudpositivaPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
  */
 
 @IonicPage()
@@ -14,7 +17,7 @@ import { IonicPage, NavController, NavParams, LoadingController, Platform, Toast
   templateUrl: 'test-actitudpositiva.html',
 })
 export class TestActitudpositivaPage {
-//variables
+
   array:string []=["1- ¿Comparto pensamientos y emociones positivas con mis seres queridos?", 
   "2-	¿Veo el lado positivo de las situaciones?",
   "3-	¿Reconozco las buenas cualidades en los demás?",
@@ -44,9 +47,6 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
   test={};
   datosTest= {"id" : window.localStorage.getItem('id'), "id_habito" : 2, "resultado" : "", "fecha":this.fechaActual, "registro":"test1"};
   loader:any;
-  /**
-   * @ignore 
-   */
   constructor(public navCtrl: NavController, platform:Platform,  public restprovider:RestProvider, 
     public loadingCtrl: LoadingController, private toastCtrl: ToastController) {
     /*  this.presentLoading();
@@ -55,9 +55,7 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
       });*/
     
   }
-/**
- * metodo asignado al boton No del test, suma puntos al acumulado para el calculo del resultado 
- */
+
   No(){
   console.log(this.fechaActual);
     this.resultado=this.resultado+1;
@@ -68,9 +66,7 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
     this.goToTest();
   }
   }
-  /**
- * metodo asignado al boton Rara vez del test, suma puntos al acumulado para el calculo del resultado 
- */
+  
   Rara(){
    
     this.resultado=this.resultado+2;
@@ -82,9 +78,7 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
   }
   }
   
-/**
- * metodo asignado al boton Aveces del test, suma puntos al acumulado para el calculo del resultado 
- */
+
   Aveces(){   
     this.resultado=this.resultado+3;
     this.i=this.i+1;
@@ -95,9 +89,6 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
     }
   }
 
-  /**
- * metodo asignado al boton Frecuentemente del test, suma puntos al acumulado para el calculo del resultado 
- */
   Frecuentemente(){
     this.resultado=this.resultado+4;
     this.i=this.i+1;
@@ -108,9 +99,6 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
     }
   }
 
-  /**
- * metodo asignado al boton Si del test, suma puntos al acumulado para el calculo del resultado 
- */
   Si(){
     this.resultado=this.resultado+5;
     this.i=this.i+1;
@@ -121,9 +109,6 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
     }
     }
 
-    /**
-     * Calcula el resultado, manda a llamar al metodo para registrar en la base de datos, navega al modulo de resultado del test con los datos obtenidos
-     */
   goToTest(){
     //this.navCtrl.push(TestPage);
    
@@ -135,32 +120,32 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
     window.localStorage.setItem('rtestagua',this.resultadotest);
     this.datosTest.resultado=this.resultadotest;
 
-    this.registrartest();
+    this.registrartest()
       
      if(this.resultadotest >= 91){
      this.test= { test:"Actitud Positiva",
        resultado:"¡Excelente!",
-        contenido:'¡Felicitaciones! casi todos los aspectos de tu vida, con respecto a este hábito, son saludables. Solo unos pocos cambios y lograrás una vida aún más saludable. La frase "mente sana", cuerpo sano, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La "Actitud Positiva" se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social. ',
+        contenido:"¡Felicitaciones! casi todos los aspectos de tu vida, con respecto a este hábito, son saludables. Solo unos pocos cambios y lograrás una vida aún más saludable. La frase ´´mente sana, cuerpo sano´´, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La ´´Actitud Positiva´´ se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social. ",
         color:"#185417"};
     }else  if(this.resultadotest < 91 && this.resultadotest >=81){
       this.test={test:"Actitud Positiva",
         resultado:"¡Muy Bueno!",
-      contenido:'¡Muy bien!, muchos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar nuevos cambios que te acerquen a una vida más saludable. ¡Puedes hacerlo! La frase "mente sana", cuerpo sano, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La "Actitud Positiva" se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social.',
+      contenido:"¡Muy bien!, muchos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar nuevos cambios que te acerquen a una vida más saludable. ¡Puedes hacerlo! La frase ´´mente sana, cuerpo sano´´, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La ´´Actitud Positiva´´ se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social.",
       color:"#458f31"};
     }else  if(this.resultadotest < 81 && this.resultadotest >=71){
       this.test={test:"Actitud Positiva",
         resultado:"¡Bueno!",
-      contenido:'¡Bien! Algunos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar unos pocos cambios que te acerquen aún más a una vida más saludable. Puedes hacerlo, ¡Tú eres protagonista de tu vida! La frase "mente sana", cuerpo sano, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La "Actitud Positiva" se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social. ',
+      contenido:"¡Bien! Algunos aspectos de tu vida, con respecto a este hábito, son saludables. ¡Felicitaciones! Puedes realizar unos pocos cambios que te acerquen aún más a una vida más saludable. Puedes hacerlo, ¡Tú eres protagonista de tu vida! La frase ´´mente sana, cuerpo sano´´, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La ´´Actitud Positiva´´ se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social. ",
       color:"#e1c206"};
     }else  if(this.resultadotest < 71 && this.resultadotest >=61){
       this.test={test:"Actitud Positiva",
         resultado:"¡Malo!",
-      contenido:'Estás un poco alejado de una vida saludable en este hábito. Revisa tu estilo de vida y haz cambios que te acerquen a una vida más saludable. Lo importante es que transformes tu realidad. Puedes hacerlo, ¡Tú eres protagonista de tu vida! La frase "mente sana", cuerpo sano, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La "Actitud Positiva" se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social.',
+      contenido:"Estás un poco alejado de una vida saludable en este hábito. Revisa tu estilo de vida y haz cambios que te acerquen a una vida más saludable. Lo importante es que transformes tu realidad. Puedes hacerlo, ¡Tú eres protagonista de tu vida! La frase ´´mente sana, cuerpo sano´´, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La ´´Actitud Positiva´´ se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social.",
       color:"#d54b00"};
     }else if(this.resultadotest < 61 ){
       this.test={test:"Actitud Positiva",
         resultado:"¡Muy Malo!",
-      contenido:'¡Es urgente que revises tu estilo de vida! Haz los cambios necesarios para lograr una vida saludable. Transforma tu realidad, ¡puedes lograrlo! La frase "mente sana", cuerpo sano, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La "Actitud Positiva" se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social. ',
+      contenido:"¡Es urgente que revises tu estilo de vida! Haz los cambios necesarios para lograr una vida saludable. Transforma tu realidad, ¡puedes lograrlo! La frase ´´mente sana, cuerpo sano´´, es una gran realidad que ha sido comprobada científicamente. Alrededor del 80% de los problemas de salud son mentales. La ´´Actitud Positiva´´ se define como la elección de aprender a pensar en lo bueno y agradable de forma constructiva, objetiva y sana y expresarlo en las relaciones interpersonales. Para mantenerte saludable es determinante conservar una Actitud Positiva frente a todas las situaciones de la vida. Esta actitud conlleva a una salud física, mental, espiritual y social. ",
       color:"#c40404"};
     }
       this.navCtrl.setRoot(EvaluacionPage);
@@ -168,9 +153,7 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
    
   }
 
-/**
- * @ignore
- */
+
   presentLoading(){
 
     this.loader=this.loadingCtrl.create({
@@ -181,9 +164,6 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
   }
 
 //registro resultados del test
-/**
- * Registra el test mediante el archivo REST
- */
   registrartest(){
     console.log(this.datosTest);
     this.showLoader();
@@ -209,15 +189,10 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
       this.presentToast(err);
     });
   }
-  /**
-   * @ignore
-   */
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestAguaPage');
   }
-/**
-   * @ignore
-   */
+
   showLoader(){
     this.loading = this.loadingCtrl.create({
         content: 'Guardando...'
@@ -225,9 +200,7 @@ imagen:string []=["./assets/imgs/actitudpositiva1.png","./assets/imgs/actitudpos
 
     this.loading.present();
   }
-/**
-   * @ignore
-   */
+
   presentToast(msg) {
     let toast = this.toastCtrl.create({
       message: msg,
